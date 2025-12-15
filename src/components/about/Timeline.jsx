@@ -116,7 +116,7 @@ const Timeline = () => {
 
         {/* Active Milestone Content */}
         {activeMilestone && (
-          <div className="bg-gradient-to-br from-gray-50 to-primary-50/30 rounded-4xl p-8 md:p-12 transition-all duration-500">
+          <div className="bg-linear-to-br from-gray-50 to-primary-50/30 rounded-4xl p-8 md:p-12 transition-all duration-500">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
               <div className="relative">
@@ -124,7 +124,7 @@ const Timeline = () => {
                   <img 
                     src={activeMilestone.image}
                     alt={activeMilestone.title}
-                    className="w-full h-[400px] object-cover"
+                    className="w-full h-100 object-cover"
                   />
                 </div>
                 <div className="absolute -bottom-6 -right-6 bg-primary-600 text-white rounded-2xl px-8 py-4 shadow-xl">
@@ -151,7 +151,7 @@ const Timeline = () => {
                         key={index}
                         className="flex items-center space-x-3 bg-white rounded-xl p-4 shadow-sm"
                       >
-                        <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 bg-primary-100 rounded-lg flex items-center justify-center shrink-0">
                           <span className="text-primary-600 font-bold text-sm">{index + 1}</span>
                         </div>
                         <span className="text-gray-700">{achievement}</span>

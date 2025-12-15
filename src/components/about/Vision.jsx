@@ -60,7 +60,7 @@ const Vision = () => {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="section-padding bg-linear-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary-200/30 rounded-full blur-3xl" />
@@ -154,7 +154,7 @@ const Vision = () => {
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-primary-500/50 transition-all duration-300"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-500 transition-colors duration-300">
+                    <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary-500 transition-colors duration-300">
                       <value.icon className="w-6 h-6 text-primary-400 group-hover:text-white transition-colors duration-300" />
                     </div>
                     <div>

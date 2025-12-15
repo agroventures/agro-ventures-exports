@@ -68,7 +68,7 @@ const ContactFAQ = () => {
   }
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="section-padding bg-linear-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary-100/50 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-secondary-100/50 rounded-full blur-3xl" />
@@ -124,7 +124,7 @@ const ContactFAQ = () => {
                   }`}>
                     {faq.question}
                   </span>
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ml-4 transition-all duration-300 ${
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ml-4 transition-all duration-300 ${
                     openIndex === index 
                       ? 'bg-primary-500 rotate-180' 
                       : 'bg-gray-100'
@@ -175,7 +175,7 @@ const ContactFAQ = () => {
           
           <div className="relative flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center space-x-6">
-              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center shrink-0">
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
               <div>

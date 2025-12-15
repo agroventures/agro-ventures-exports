@@ -46,8 +46,8 @@ const ContactHero = () => {
           alt="Contact Us"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/85 to-gray-900/75" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900/50" />
+        <div className="absolute inset-0 bg-linear-to-r from-gray-900/95 via-gray-900/85 to-gray-900/75" />
+        <div className="absolute inset-0 bg-linear-to-t from-gray-900 via-transparent to-gray-900/50" />
       </div>
 
       {/* Animated Background Elements */}
@@ -58,7 +58,7 @@ const ContactHero = () => {
 
       {/* Grid Pattern */}
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-size:[60px_60px]" />
       </div>
 
       <div className="container-custom relative z-10 pt-32 pb-20">

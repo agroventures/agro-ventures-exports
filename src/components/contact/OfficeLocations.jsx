@@ -66,7 +66,7 @@ const OfficeLocations = () => {
   const currentOffice = offices[activeLocation]
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-900 to-gray-800 relative overflow-hidden">
+    <section className="section-padding bg-linear-to-b from-gray-900 to-gray-800 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
@@ -118,7 +118,7 @@ const OfficeLocations = () => {
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-8 items-stretch">
           {/* Map */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl h-[500px]">
+          <div className="rounded-3xl overflow-hidden shadow-2xl h-125">
             <iframe
               src={currentOffice.mapUrl}
               width="100%"
@@ -162,7 +162,7 @@ const OfficeLocations = () => {
             <div className="space-y-6">
               {/* Address */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0">
                   <MapPin className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
@@ -182,7 +182,7 @@ const OfficeLocations = () => {
 
               {/* Phone */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0">
                   <Phone className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
@@ -202,7 +202,7 @@ const OfficeLocations = () => {
 
               {/* Email */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>
@@ -218,7 +218,7 @@ const OfficeLocations = () => {
 
               {/* Hours */}
               <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0">
                   <Clock className="w-6 h-6 text-primary-400" />
                 </div>
                 <div>

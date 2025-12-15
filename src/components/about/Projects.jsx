@@ -122,7 +122,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/80 via-gray-900/20 to-transparent" />
                 
                 {/* Category Badge */}
                 <div className="absolute top-4 left-4">
@@ -213,7 +213,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 to-transparent" />
                 
                 {/* Category */}
                 <div className="absolute top-3 left-3">
@@ -236,7 +236,7 @@ const Projects = () => {
                   </span>
                   <span>•</span>
                   <span className="flex items-center truncate">
-                    <MapPin className="w-3.5 h-3.5 mr-1 flex-shrink-0" />
+                    <MapPin className="w-3.5 h-3.5 mr-1 shrink-0" />
                     {project.location}
                   </span>
                 </div>

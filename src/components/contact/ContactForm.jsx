@@ -125,7 +125,7 @@ const ContactForm = () => {
     <section className="section-padding bg-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-pattern-dots opacity-30" />
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary-50/50 to-transparent" />
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary-50/50 to-transparent" />
 
       <div className="container-custom relative">
         <div className="grid lg:grid-cols-5 gap-12">
@@ -158,7 +158,7 @@ const ContactForm = () => {
                   { step: "4", title: "We Deliver", desc: "Start your export journey" }
                 ].map((item, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
-                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-primary-600 transition-colors">
+                    <div className="w-10 h-10 bg-primary-100 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-primary-600 transition-colors">
                       <span className="text-primary-600 font-bold group-hover:text-white transition-colors">
                         {item.step}
                       </span>
@@ -184,7 +184,7 @@ const ContactForm = () => {
                   "Flexible payment terms"
                 ].map((item, index) => (
                   <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-primary-500 shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </div>
                 ))}

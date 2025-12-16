@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowRight, Play, ChevronDown } from 'lucide-react'
+import { ArrowRight, ChevronDown } from 'lucide-react'
 import { features, slides } from '../../data/content'
 
 const Hero = () => {
@@ -65,8 +65,8 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <a href="/products" className="btn-primary group">
-                Explore Products
+              <a href="#about" className="btn-primary group">
+                Explore
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

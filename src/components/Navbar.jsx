@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between">
           {/* Logo with CSS Filter */}
-          <a href="#home" className="flex items-center space-x-3 group">
+          <a href="/" className="flex items-center space-x-3 group">
             <img 
               src="/logo.png" 
               className={`w-40 transition-all duration-500 ${

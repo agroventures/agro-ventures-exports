@@ -15,7 +15,11 @@ import {
   Users,
   Target,
   Leaf,
+  Tractor,
+  Sparkles,
 } from "lucide-react";
+import { FaWrench } from "react-icons/fa";
+import { LuTrendingUp } from "react-icons/lu";
 
 // Navigation Links
 export const navLinks = [
@@ -37,16 +41,21 @@ export const navLinks = [
   { name: "Contact", href: "/contact" },
 ];
 
+export const establishedYear = 2022;
+
+export const yearsOfExperience = 3;
+
 // Products
 export const products = [
   {
     id: 1,
     name: "Non-Alcoholic Vanilla Extract",
-    image:
-      "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?w=600&q=80",
+    image: "/src/assets/products/NON_ALCOHOLIC_VANILLA_EXTRACT.jpg",
+    excerpt:
+      "Indulge in the exquisite essence of pure, hand-selected Sri Lankan vanilla beans, meticulously extracted through a gentle alcohol-free process.",
     description: (
       <>
-        <p className="text-sm text-justify">
+        <p className="text-gray-600 text-sm mb-3 text-justify">
           Indulge in the exquisite essence of{" "}
           <span className="font-semibold">
             pure, hand-selected Sri Lankan vanilla beans
@@ -81,18 +90,19 @@ export const products = [
         <li>Purified Water</li>
         <li>Vegetable Glycerin (Plant-Based)</li>
         <li>Natural Vanilla Bean Extractives</li>
-        <p>(No Alcohol, No Artificial Flavours, No Preservatives)</p>
+        <span>(No Alcohol, No Artificial Flavours, No Preservatives)</span>
       </ul>
     ),
   },
   {
     id: 2,
     name: "Alcoholic Vanilla Extract",
-    image:
-      "https://images.unsplash.com/photo-1586201375761-83865001e31c?w=600&q=80",
+    image: "/src/assets/products/ALCOHOLIC_VANILLA_EXTRACT.jpg",
+    excerpt:
+      "Experience the rich, complex aroma of hand-selected Sri Lankan vanilla beans carefully macerated in high-quality food-grade alcohol to create a truly authentic vanilla extract.",
     description: (
       <>
-        <p className="text-sm text-justify">
+        <p className="text-gray-600 text-sm mb-3 text-justify">
           Experience the rich, complex aroma of{" "}
           <span className="font-semibold">
             hand-selected Sri Lankan vanilla beans
@@ -126,11 +136,12 @@ export const products = [
   {
     id: 3,
     name: "Natural Vanilla Paste",
-    image:
-      "https://images.unsplash.com/photo-1599909533681-74570b4f8a66?w=600&q=80",
+    image: "/src/assets/products/VANILLA_PASTE.jpg",
+    excerpt:
+      "Experience the rich, full-bodied flavor of hand-harvested Sri Lankan vanilla beans in a convenient, ready-to-use paste.",
     description: (
       <>
-        <p className="text-sm text-justify">
+        <p className="text-gray-600 text-sm mb-3 text-justify">
           Experience the rich, full-bodied flavor of{" "}
           <span className="font-semibold">
             hand-harvested Sri Lankan vanilla beans
@@ -155,60 +166,333 @@ export const products = [
     ingredients: (
       <ul>
         <li>Natural Vanilla Beans</li>
-        <li>Natural Vanilla Extract (Alcohol or Glycerin-Based, depending on formulation)</li>
+        <li>
+          Natural Vanilla Extract (Alcohol or Glycerin-Based, depending on
+          formulation)
+        </li>
         <li>Natural Thickening/Binder (e.g., Gum Acacia or Corn Syrup)</li>
       </ul>
     ),
   },
   {
     id: 4,
-    name: "Green Cardamom",
-    category: "spices",
-    image:
-      "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80",
-    description: "Aromatic green cardamom pods",
-    rating: 4.9,
-    origin: "Kerala, India",
+    name: "Natural Vanilla Powder ",
+    image: "/src/assets/products/VANILLA_POWDER.png",
+    excerpt:
+      "Discover the delicate, aromatic essence of hand-selected Sri Lankan vanilla beans in a finely ground, convenient powder form.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Discover the delicate, aromatic essence of{" "}
+          <span className="font-semibold">
+            hand-selected Sri Lankan vanilla beans
+          </span>{" "}
+          in a finely ground, convenient powder form. Our{" "}
+          <span className="font-semibold">Natural Vanilla Powder</span>is made
+          by carefully dehydrating and grinding the highest-quality vanilla
+          beans, preserving the rich flavor and intoxicating aroma of pure
+          vanilla.
+          <br />
+          Ideal for{" "}
+          <span className="font-semibold">
+            baking, desserts, beverages, chocolate, and specialty culinary
+            creations,
+          </span>{" "}
+          this powder offers the authentic taste of vanilla without any
+          artificial additives or alcohol. Perfect for chefs, gourmet bakers,
+          and confectioners who demand{" "}
+          <span className="font-semibold">
+            purity, convenience, and consistent flavor.
+          </span>
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li> Natural Vanilla Beans (Finely Ground)</li>
+        <li>
+          Anti-Caking Agent (Food-Grade, e.g., Maltodextrin or Rice Flour)
+        </li>
+
+        <span>
+          (100% Natural, No Artificial Flavours or Colors, Alcohol-Free){" "}
+        </span>
+      </ul>
+    ),
   },
   {
     id: 5,
-    name: "Chickpeas (Kabuli)",
-    category: "pulses",
-    image:
-      "https://images.unsplash.com/photo-1515543904379-3d757afe72e4?w=600&q=80",
-    description: "Large white chickpeas, export quality",
-    rating: 4.6,
-    origin: "Madhya Pradesh, India",
+    name: "Natural Vanilla Syrup  ",
+    image: "/src/assets/products/VANILLA_SYRUP.jpg",
+    excerpt:
+      "Indulge in the smooth, rich sweetness of hand-selected Sri Lankan vanilla beans infused into a velvety natural syrup.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Indulge in the smooth, rich sweetness of{" "}
+          <span className="font-semibold">
+            hand-selected Sri Lankan vanilla beans
+          </span>{" "}
+          infused into a{" "}
+          <span className="font-semibold">velvety natural syrup.</span>Our{" "}
+          <span className="font-semibold">Natural Vanilla Syrup</span> blends{" "}
+          <span className="font-semibold">
+            pure vanilla extract, natural sweeteners, and purified water
+          </span>{" "}
+          to create a luxurious, alcohol-free syrup that captures the authentic
+          aroma and flavor of real vanilla.
+          <br /> Perfect for{" "}
+          <span className="font-semibold">
+            gourmet beverages, cocktails, desserts, pancakes, ice creams, and
+            specialty coffee creations,
+          </span>{" "}
+          this syrup delivers consistent quality and natural flavor without any
+          artificial additives. {""}
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li>Purified Water </li>
+        <li>Natural Vanilla Extract (Alcohol or Glycerin-Based)</li>
+        <li>Natural Sweeteners (e.g., Cane Sugar, Glucose, or Stevia)</li>
+        <li>Natural Preservative (optional, e.g., Citric Acid)</li>
+      </ul>
+    ),
   },
   {
     id: 6,
-    name: "Groundnut Oil",
-    category: "oils",
-    image:
-      "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?w=600&q=80",
-    description: "Cold pressed natural groundnut oil",
-    rating: 4.8,
-    origin: "Gujarat, India",
+    name: "100% Vanilla Bathing Bar – SKIN AND WELLNESS",
+    image: "/src/assets/products/VANILLA_BATHING_BAR.png",
+    excerpt:
+      "Experience the luxury of pure vanilla-infused skincare with our 100% Vanilla Bathing Bars — crafted to cleanse, nourish, and rejuvenate your skin naturally.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Experience the luxury of{" "}
+          <span className="font-semibold">pure vanilla-infused skincare</span>{" "}
+          with our{" "}
+          <span className="font-semibold">100% Vanilla Bathing Bars</span>—
+          crafted to cleanse, nourish, and rejuvenate your skin naturally. Made
+          with{" "}
+          <span className="font-semibold">
+            premium natural vanilla extract and high-quality botanical
+            ingredients,
+          </span>{" "}
+          each bar transforms your daily bath into a spa-like indulgence,
+          leaving your skin soft, fragrant, and radiant.
+        </p>
+      </>
+    ),
+    brands:
+      "Natural Vanilla | Vanilla & Charcoal | Vanilla & Rosette | Vanilla & Aloe Vera",
+    ingredients: (
+      <ul>
+        <li>Natural Vanilla Extract</li>
+        <li>
+          Saponified Oils (Coconut Oil, Palm Oil, Olive Oil, or Shea Butter)
+        </li>
+        <li>Botanical Additives (Charcoal / Rose Extract / Aloe Vera)</li>
+        <li>Natural Glycerin</li>
+        <li>Essential Oils (optional, depending on variant)</li>
+      </ul>
+    ),
   },
   {
     id: 7,
-    name: "Cumin Seeds",
-    category: "spices",
-    image:
-      "https://images.unsplash.com/photo-1599909533353-f2b1fb90a76a?w=600&q=80",
-    description: "Premium quality whole cumin seeds",
-    rating: 4.7,
-    origin: "Rajasthan, India",
+    name: "Hand Made Vanilla Based Soap",
+    image: "/src/assets/products/HAND_MADE_SOAP.jpg",
+    excerpt:
+      "Indulge in the luxurious care of handmade soaps enriched with premium natural vanilla.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Indulge in the luxurious care of{" "}
+          <span className="font-semibold">
+            {" "}
+            handmade soaps enriched with premium natural vanilla.
+          </span>{" "}
+          Each bar is thoughtfully crafted using{" "}
+          <span className="font-semibold">
+            pure vanilla extract and nourishing botanical oils,{" "}
+          </span>
+          offering a gentle cleanse while leaving the skin soft, hydrated, and
+          delicately scented.
+          <br /> Perfect for{" "}
+          <span className="font-semibold">
+            daily use, spa treatments, or gifting,
+          </span>{" "}
+          these artisanal soaps provide a natural, aromatic bathing experience
+          that transforms everyday routines into moments of indulgence.
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li>Natural Vanilla Extract</li>
+        <li>
+          Saponified Oils (Coconut Oil, Palm Oil, Olive Oil, or Shea Butter)
+        </li>
+        <li>Natural Glycerin</li>
+        <li>Essential Oils (optional, depending on variant)</li>
+        <li>
+          Botanical Additives (optional: Aloe Vera, Charcoal, Rose Extract,
+          etc.)
+        </li>
+      </ul>
+    ),
   },
   {
     id: 8,
-    name: "Yellow Lentils",
-    category: "pulses",
-    image:
-      "https://images.unsplash.com/photo-1613758947307-f3b8f5d80711?w=600&q=80",
-    description: "Split yellow lentils (Toor Dal)",
-    rating: 4.5,
-    origin: "Maharashtra, India",
+    name: "Natural Vanilla Mood Fixing Spray",
+    image: "/src/assets/products/MOOD_FIXING_SPRAY.jpg",
+    excerpt:
+      "Elevate your senses and enhance your mood with our Natural Vanilla-Based Mood Fixing Spray.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Elevate your senses and enhance your mood with our{" "}
+          <span className="font-semibold">
+            {" "}
+            Natural Vanilla-Based Mood Fixing Spray.
+          </span>{" "}
+          Infused with{" "}
+          <span className="font-semibold">
+            pure Sri Lankan vanilla extract and aromatic botanical essences,{" "}
+          </span>
+          this spray delivers a calming, uplifting fragrance that refreshes the
+          mind and soothes the soul. <br />
+          Perfect for{" "}
+          <span className="font-semibold">
+            home, office, or personal use,
+          </span>{" "}
+          it creates a serene and comforting atmosphere, turning any space into
+          a sanctuary of relaxation and positivity.
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li>Purified Water </li>
+        <li>Natural Vanilla Extract</li>
+        <li>
+          Botanical Essential Oils (optional: Lavender, Rose, or Citrus for
+          added aromatherapy benefits)
+        </li>
+        <li>
+          Natural Preservatives (optional, e.g., Citric Acid or Potassium
+          Sorbate)
+        </li>
+      </ul>
+    ),
+  },
+  {
+    id: 9,
+    name: "Natural Vanilla Infused Tea",
+    image: "/src/assets/products/VANILLA_TEA.jpg",
+    excerpt:
+      "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Savor the exquisite taste of{" "}
+          <span className="font-semibold">
+            premium Ceylon tea leaves, renowned worldwide for their bright,
+            brisk flavor and natural freshness, delicately infused with{" "}
+            <span className="font-semibold">pure Sri Lankan vanilla.</span> Our{" "}
+            <span className="font-semibold">
+              Natural Vanilla-Infused Ceylon Tea
+            </span>{" "}
+            delivers a smooth, aromatic experience with subtle sweet notes and
+            the comforting fragrance of vanilla, offering a luxurious tea ritual
+            in every cup. <br />
+            Perfect for{" "}
+            <span className="font-semibold">
+              morning rejuvenation, afternoon relaxation, or gifting,
+            </span>{" "}
+            this tea combines the finest
+            <span className="font-semibold"></span>world-class Ceylon tea
+          </span>{" "}
+          with natural vanilla to create a harmonious blend of flavor and
+          wellness.
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li>Premium Ceylon Tea Leaves (Black or Green)</li>
+        <li>Natural Vanilla Extract or Vanilla Beans</li>
+        <li>Optional Natural Flavor Enhancers (e.g., Cinnamon, Cardamom)</li>
+      </ul>
+    ),
+  },
+  {
+    id: 10,
+    name: "Natural Vanilla Infused Tea Sachet Pack – 30",
+    image: "/src/assets/products/TEA_SACHET.png",
+    excerpt:
+      "Enjoy the convenience of 30 individually packed sachets of premium Ceylon tea, delicately infused with pure Sri Lankan vanilla.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Enjoy the convenience of{" "}
+          <span className="font-semibold">
+            30 individually packed sachets of premium Ceylon tea,
+          </span>{" "}
+          delicately infused with
+          <span className="font-semibold"> pure Sri Lankan vanilla.</span> Each
+          sachet delivers the bright, brisk flavor and natural freshness of
+          <span className="font-semibold">world-renowned Ceylon tea,</span>{" "}
+          enriched with the sweet, aromatic notes of authentic vanilla. <br />
+          Perfect for
+          <span className="font-semibold">
+            {" "}
+            daily indulgence, office breaks, travel, or gifting,
+          </span>{" "}
+          this sachet pack ensures a luxurious and consistent tea experience
+          anytime, anywhere.
+        </p>
+      </>
+    ),
+    ingredients: (
+      <ul>
+        <li>Premium Ceylon Tea Leaves (Black or Green)</li>
+        <li>Natural Vanilla Extract or Vanilla Beans</li>
+        <li>Optional Natural Flavor Enhancers (e.g., Cinnamon, Cardamom)</li>
+      </ul>
+    ),
+  },
+  {
+    id: 11,
+    name: "Premium Quality Vanilla Pods",
+    image: "/src/assets/products/VANILLA_PODS.jpg",
+    excerpt:
+      "Experience the unmatched richness of hand-selected Sri Lankan vanilla pods, cultivated under ideal conditions to ensure superior aroma, flavor, and moisture content.",
+    description: (
+      <>
+        <p className="text-gray-600 text-sm mb-3 text-justify">
+          Experience the unmatched richness of{" "}
+          <span className="font-semibold">
+            hand-selected Sri Lankan vanilla pods,
+          </span>{" "}
+          cultivated under ideal conditions to ensure{" "}
+          <span className="font-semibold">
+            superior aroma, flavor, and moisture content.
+          </span>{" "}
+          Our{" "}
+          <span className="font-semibold">Premium Quality Vanilla Pods</span>{" "}
+          are naturally cured to perfection, delivering the authentic, deep, and
+          sweet aroma of pure vanilla in every pod. <br />
+          Perfect for{" "}
+          <span className="font-semibold">
+            culinary creations, desserts, beverages, baking, or flavoring syrups
+            and extracts,
+          </span>{" "}
+          these pods represent the finest standard of vanilla, sought after by
+          gourmet chefs and premium brands worldwide.
+        </p>
+      </>
+    ),
   },
 ];
 
@@ -225,40 +509,59 @@ export const support = [
 //Services
 export const services = [
   {
-    icon: Package,
+    id: "creating-awareness",
+    icon: Sparkles,
     title: "Creating Awareness",
-    excerpt:
-      "The Sri Lankan Vanilla Initiative is one of the leading pioneers.",
-    description:
-      "The Sri Lankan Vanilla Initiative is one of the leading pioneers in the cultivation and processing of Vanilla in Sri Lanka. With more than two decades of experience in Vanilla production, this esteemed group is committed to sustainable cultivating and carefully oversees each process from start to finish with a hands-on approach. Through contract farming partnerships and their improved techniques, the Sri Lankan Vanilla Initiative provides small and large farmers with an opportunity for success through vanilla cultivation. The Initiative also guarantees 100% buyback at the farm gate prices that are competitive within the market and assurances of a Minimum Support Price. With their expertise, passion, and dedication, the Indian Vanilla Initiative has become a trusted leader in many communities throughout Sri Lanka.",
+    shortDesc:
+      "The Sri Lankan Vanilla Initiative is one of the leading pioneers in the cultivation and processing of Vanilla in Sri Lanka.",
+    image: "/src/assets/services/img2.png",
     color: "primary",
   },
   {
-    icon: FlaskConical,
+    id: "quality-planting-material",
+    icon: Leaf,
     title: "Quality Planting Material",
-    excerpt:
-      "SLVI's nursery is at the forefront of the effort to keep vanilla farming alive.",
-    description:
-      "SLVI's nursery is at the forefront of the effort to keep vanilla farming alive and well in Sri Lanka. The nursery provides healthy, robust vanilla vines to farmers for cultivation each year, offering an annual supply capacity of 400,000 saplings. Our experienced field officers deliver these saplings directly to farmers in order to maximize the success rate of cultivation. Since its inception, SLVI's nursery has been dedicated to providing only the highest quality vanilla vines so that farmers can increase their yields and farmers can participate in this lucrative opportunity that has been a cornerstone of Indian culture for centuries.",
+    shortDesc:
+      "SLVI's nursery is at the forefront of the effort to keep vanilla farming alive and well in Sri Lanka.",
+    image: "/src/assets/services/img5.jpg",
     color: "secondary",
   },
   {
-    icon: FileCheck,
+    id: "vanilla-cultivation",
+    icon: Users,
     title: "Vanilla Cultivation",
-    excerpt:
-      "SLVI has been dedicated to bringing the highest quality products to customers.",
-    description:
-      "SLVI has been dedicated to bringing the highest quality products to customers around the world for two decades. It takes passion, commitment and an ongoing dedication to knowledge, both the science of cultivation and the practical aspects of farming, to make that happen. SLVI is continually upgrading their methods and technology while also being open to feedback from farmers in order to deliver fruits and vegetables that embody farm-fresh flavor and nutrition. Experience global farm-to-table freshness with SLVI.",
-    color: "primary",
+    shortDesc:
+      "SLVI has been dedicated to bringing the highest quality products to customers around the world for two decades.",
+    image: "/src/assets/services/img7.png",
+    color: "green",
   },
   {
-    icon: Warehouse,
+    id: "contract-farming",
+    icon: FileCheck,
     title: "Contract Farming",
-    excerpt:
-      "SLVI's mission is to empower farmers across Sri Lanka by providing them all tools.",
-    description:
-      "SLVI's mission is to empower farmers across Sri Lanka by providing them with the tools and resources needed to produce high-quality vanilla crops. Through interactive sessions, SLVI familiarizes farmers with the benefits of vanilla cultivation and offers a farming contract that guarantees 100% crop purchase and a minimum selling price. Our team of experts ensures that each step of the process meets with world-class standards, from growing and harvesting all the way through distillation and export, making sure each batch of vanilla produced is of optimal quality and freshness. We are committed to bringing our customers an unbeatable selection of premium vanilla products sourced directly from our trusted network of family-run farms.",
-    color: "secondary",
+    shortDesc:
+      "SLVI's mission is to empower farmers across Sri Lanka by providing them with the tools and resources needed to produce high-quality vanilla crops.",
+    image: "/src/assets/services/img8.png",
+    color: "blue",
+  },
+];
+
+// Office Details
+export const offices = [
+  {
+    id: 1,
+    name: "Corporate Office",
+    city: "Colombo",
+    address: "No: 48, Sir Marcus Fernando, Colombo 07",
+    phone: "+94 11 287 8766",
+    mobile: "+94 70 513 0907",
+    email: "info@agroventuresexports.com",
+    hours: "Mon - Fri: 8.30 Am - 5.00 PM and Sat: 8.30 Am - 12:30 PM",
+    mapUrl:
+      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8428552445066!2d79.8604089!3d6.9093861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae259f84c7e64b3%3A0x969f0df303642a7e!2sAgro%20Ventures%20Exports%20(Pvt)%20Ltd!5e0!3m2!1sen!2slk!4v1765880963785!5m2!1sen!2slk",
+    image:
+      "https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=600&q=80",
+    type: "headquarters",
   },
 ];
 
@@ -301,6 +604,28 @@ export const testimonials = [
   },
 ];
 
+// Agricultural Data
+export const agriculturalData = [
+  {
+    icon: Tractor,
+    title: "Harvesting",
+    description:
+      "Vanilla beans are hand-harvested at peak maturity to preserve aroma, flavor, and quality.",
+  },
+  {
+    icon: LuTrendingUp,
+    title: "Growth",
+    description:
+      "We support sustainable vanilla farming practices that ensure consistent yield and long-term farmer growth.",
+  },
+  {
+    icon: FaWrench,
+    title: "Maintenance",
+    description:
+      "Careful curing, drying, and storage processes are maintained to protect the richness and freshness of vanilla beans.",
+  },
+];
+
 //Company List
 export const companies = [
   { name: "plantations", img: "src/assets/companies/1.png" },
@@ -331,7 +656,7 @@ export const slides = [
     subtitle: "Exports Worldwide",
     description:
       "Delivering the finest quality spices, grains, and agricultural products from India to global markets.",
-    image: "/src/assets/hero/hero1.jpg",
+    image: "/src/assets/home/hero1.jpg",
   },
   // {
   //   title: "From Farm to",
@@ -344,7 +669,7 @@ export const slides = [
     subtitle: "Global Standards",
     description:
       "ISO certified export processes ensuring premium quality in every shipment.",
-    image: "/src/assets/hero/hero2.avif",
+    image: "/src/assets/home/hero2.avif",
   },
 ];
 

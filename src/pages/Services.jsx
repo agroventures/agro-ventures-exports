@@ -19,7 +19,7 @@ const ServicesPage = () => {
       <ServicePlantingMaterial />
       <ServiceVanillaCultivation />
       <ServiceContractFarming />
-      <ServicesProcess />
+      {/* <ServicesProcess /> */}
       <Footer />
     </div>
   )

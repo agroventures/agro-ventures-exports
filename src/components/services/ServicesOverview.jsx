@@ -1,76 +1,10 @@
 import React from 'react'
 import { 
-  Sparkles, 
-  Leaf, 
-  Users, 
-  FileCheck,
-  ArrowRight,
-  CheckCircle
+  ArrowRight
 } from 'lucide-react'
+import { services } from '../../data/content'
 
 const ServicesOverview = () => {
-  const services = [
-    {
-      id: "creating-awareness",
-      icon: Sparkles,
-      title: "Creating Awareness",
-      shortDesc: "Educating farmers about high-value crops and modern farming techniques",
-      features: [
-        "Farmer education programs",
-        "Market trend analysis",
-        "Crop selection guidance",
-        "Technical training workshops"
-      ],
-      image: "https://images.unsplash.com/photo-1589923188651-268a9765e432?w=600&q=80",
-      color: "primary",
-      stats: { value: "5000+", label: "Farmers Educated" }
-    },
-    {
-      id: "quality-planting-material",
-      icon: Leaf,
-      title: "Quality Planting Material",
-      shortDesc: "Providing certified, disease-free planting materials for optimal yields",
-      features: [
-        "Tissue culture plants",
-        "Certified seeds & saplings",
-        "Disease-free materials",
-        "High-yield varieties"
-      ],
-      image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-      color: "secondary",
-      stats: { value: "1M+", label: "Plants Supplied" }
-    },
-    {
-      id: "vanilla-cultivation",
-      icon: Users,
-      title: "Vanilla Cultivation",
-      shortDesc: "Complete support for vanilla farming from plantation to harvest",
-      features: [
-        "Site assessment & planning",
-        "Cultivation techniques",
-        "Pollination training",
-        "Curing & processing guidance"
-      ],
-      image: "https://images.unsplash.com/photo-1631209121750-a9f656d26a5b?w=600&q=80",
-      color: "green",
-      stats: { value: "500+", label: "Vanilla Farmers" }
-    },
-    {
-      id: "contract-farming",
-      icon: FileCheck,
-      title: "Contract Farming",
-      shortDesc: "Guaranteed buyback agreements ensuring stable income for farmers",
-      features: [
-        "Buyback guarantee",
-        "Technical support",
-        "Input supply assistance",
-        "Fair pricing mechanism"
-      ],
-      image: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80",
-      color: "blue",
-      stats: { value: "5000+", label: "Acres Contracted" }
-    }
-  ]
 
   return (
     <section id="services" className="section-padding bg-white relative overflow-hidden">
@@ -115,12 +49,6 @@ const ServicesOverview = () => {
                     service.color === 'green' ? 'bg-green-600/40' :
                     'bg-blue-600/40'
                   } group-hover:opacity-60 transition-opacity`} />
-                  
-                  {/* Stats Badge */}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2">
-                    <div className="text-xl font-bold text-gray-900">{service.stats.value}</div>
-                    <div className="text-xs text-gray-600">{service.stats.label}</div>
-                  </div>
                 </div>
 
                 {/* Content */}
@@ -147,21 +75,6 @@ const ServicesOverview = () => {
                   <p className="text-gray-600 text-sm mb-4">
                     {service.shortDesc}
                   </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-6 grow">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center space-x-2">
-                        <CheckCircle className={`w-4 h-4 shrink-0 ${
-                          service.color === 'primary' ? 'text-primary-500' :
-                          service.color === 'secondary' ? 'text-secondary-500' :
-                          service.color === 'green' ? 'text-green-500' :
-                          'text-blue-500'
-                        }`} />
-                        <span className="text-gray-700 text-sm">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
 
                   {/* CTA */}
                   <a

@@ -4,7 +4,7 @@ import Hero from "../components/home/Hero";
 import About from "../components/home/About";
 import Products from "../components/home/Products";
 import Services from "../components/home/Services";
-import WhyChooseUs from "../components/home/WhyChooseUs";
+import AgriEnterprise from "../components/home/AgriEnterprise";
 import Stats from "../components/home/Stats";
 import Testimonials from "../components/home/Testimonials";
 import CTA from "../components/home/CTA";
@@ -17,9 +17,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <AgriEnterprise />
       <Products />
       <Services />
-      <WhyChooseUs />
       {/* <Stats /> */}
       <Testimonials />
       {/* <CTA /> */}

@@ -1,6 +1,7 @@
 import React from 'react'
-import { Leaf, Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowUp, Mail, Phone, MapPin } from 'lucide-react'
+import { ArrowUp, Mail, Phone, MapPin } from 'lucide-react'
 import { navLinks, products, socialLinks } from '../data/content'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -81,7 +82,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold mb-6">Products</h4>
               <ul className="space-y-3">
-                {products.map((link, index) => (
+                {products.slice(0, 6).map((link, index) => (
                   <li key={index}>
                     <a href={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
@@ -146,7 +147,7 @@ const Footer = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-center md:text-left">
-              © {new Date().getFullYear()} AgroVentures Exports. All rights reserved.
+              © {new Date().getFullYear()} <Link to='/' className='font-semibold hover:underline'>Agro Ventures Exports</Link>. All rights reserved.
             </p>
             
             {/* Social Links */}

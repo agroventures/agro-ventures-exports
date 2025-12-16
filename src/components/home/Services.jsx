@@ -48,7 +48,7 @@ const Services = () => {
 
               {/* Content */}
               <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{service.excerpt}</p>
+              <p className="text-gray-400 leading-relaxed">{service.shortDesc}</p>
 
               {/* Hover Line */}
               <div className={`absolute bottom-0 left-0 right-0 h-1 rounded-b-3xl transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ${

@@ -212,6 +212,7 @@ export const products = [
   },
 ];
 
+//Support Links
 export const support = [
   { name: "Contact Us", href: "#contact" },
   { name: "FAQ", href: "#" },
@@ -221,6 +222,7 @@ export const support = [
   { name: "Terms & Conditions", href: "#" },
 ];
 
+//Services
 export const services = [
   {
     icon: Package,
@@ -260,6 +262,7 @@ export const services = [
   },
 ];
 
+//Testimonials
 export const testimonials = [
   {
     id: 1,
@@ -298,6 +301,7 @@ export const testimonials = [
   },
 ];
 
+//Company List
 export const companies = [
   { name: "plantations", img: "src/assets/companies/1.png" },
   { name: "development", img: "src/assets/companies/2.png" },
@@ -306,6 +310,7 @@ export const companies = [
   { name: "vanilla shop", img: "src/assets/companies/5.png" },
 ];
 
+//Social Links
 export const socialLinks = [
   { icon: Facebook, href: "https://www.facebook.com/agroventuresplantations/" },
   { icon: Twitter, href: "https://twitter.com/agroventuresltd" },
@@ -319,6 +324,7 @@ export const socialLinks = [
   },
 ];
 
+//Slides
 export const slides = [
   {
     title: "Premium Agricultural",
@@ -342,11 +348,13 @@ export const slides = [
   },
 ];
 
+// Features
 export const features = [
   { icon: Award, text: "ISO Certified" },
   { icon: Truck, text: "Fast Delivery" },
 ];
 
+// Values
 export const values = [
   {
     icon: Target,
@@ -368,6 +376,7 @@ export const values = [
   },
 ];
 
+// Highlights
 export const highlights = [
   "Best Quality Productions",
   "Best Quality Vanilla",

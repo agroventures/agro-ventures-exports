@@ -18,12 +18,12 @@ const About = () => {
       <AboutHero />
       <CompanyStory />
       <Vision />
-      <Timeline />
-      <Plantations />
+      {/* <Timeline /> */}
+      {/* <Plantations /> */}
       <Projects />
-      <Team />
+      {/* <Team /> */}
       <Certifications />
-      <CTA />
+      {/* <CTA /> */}
       <Footer />
     </div>
   )

@@ -182,7 +182,7 @@ const Projects = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        {/* <div className="flex flex-wrap justify-center gap-3 mb-12">
           {filters.map((filter) => (
             <button
               key={filter.id}
@@ -197,16 +197,15 @@ const Projects = () => {
               <span>{filter.name}</span>
             </button>
           ))}
-        </div>
+        </div> */}
 
         {/* All Projects Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <div 
               key={project.id}
               className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 card-hover"
             >
-              {/* Image */}
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image}
@@ -215,7 +214,6 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 to-transparent" />
                 
-                {/* Category */}
                 <div className="absolute top-3 left-3">
                   <span className={`px-2.5 py-1 text-xs font-semibold uppercase rounded-full ${
                     project.category === 'export' ? 'bg-primary-500 text-white' :
@@ -227,7 +225,6 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <div className="flex items-center space-x-3 text-sm text-gray-500 mb-3">
                   <span className="flex items-center">
@@ -246,7 +243,6 @@ const Projects = () => {
                 </h3>
                 <p className="text-gray-600 text-sm line-clamp-2 mb-4">{project.description}</p>
 
-                {/* Quick Stats */}
                 <div className="flex items-center justify-between pt-4 border-t border-gray-100">
                   <div className="flex items-center space-x-4">
                     {Object.entries(project.stats).slice(0, 2).map(([key, value], idx) => (
@@ -261,7 +257,7 @@ const Projects = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* View All Button */}
         <div className="text-center mt-12">

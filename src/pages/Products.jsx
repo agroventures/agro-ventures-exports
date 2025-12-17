@@ -6,6 +6,7 @@ import FeaturedProducts from '../components/products/FeaturedProducts'
 import ProductGrid from '../components/products/ProductGrid'
 import ProductModal from '../components/products/ProductModal'
 import Footer from '../components/Footer'
+import useSEO from '../hooks/useSEO'
 
 const Products = () => {
   const [selectedProduct, setSelectedProduct] = useState(null)
@@ -22,6 +23,15 @@ const Products = () => {
     setSelectedProduct(null)
     document.body.style.overflow = 'unset'
   }
+
+  const url = window.location.href;
+
+  useSEO({
+    title: "Products - Agro Ventures Exports",
+    url,
+    image_alt: "Products",
+    twitter_card: "summary_large_image",
+  });
 
   return (
     <div className="overflow-hidden">

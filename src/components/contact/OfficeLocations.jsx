@@ -58,7 +58,7 @@ const OfficeLocations = () => {
         </div>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
           {/* Map */}
           <div className="rounded-3xl overflow-hidden shadow-2xl h-125">
             <iframe
@@ -143,7 +143,7 @@ const OfficeLocations = () => {
               </div>
 
               {/* Email */}
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start overflow-hidden space-x-4">
                 <div className="w-12 h-12 bg-primary-500/20 rounded-xl flex items-center justify-center shrink-0">
                   <Mail className="w-6 h-6 text-primary-400" />
                 </div>

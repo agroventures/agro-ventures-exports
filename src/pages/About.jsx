@@ -10,8 +10,18 @@ import Team from '../components/about/Team'
 import Certifications from '../components/about/Certifications'
 import CTA from '../components/home/CTA'
 import Footer from '../components/Footer'
+import useSEO from '../hooks/useSEO'
 
 const About = () => {
+  const url = window.location.href;
+
+  useSEO({
+    title: "About - Agro Ventures Exports",
+    url,
+    image_alt: "About",
+    twitter_card: "summary_large_image",
+  });
+
   return (
     <div className="overflow-hidden">
       <Navbar />

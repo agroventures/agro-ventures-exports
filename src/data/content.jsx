@@ -3,10 +3,8 @@ import {
   Truck,
   Shield,
   FileCheck,
-  HeadphonesIcon,
+  Heart,
   Globe,
-  Warehouse,
-  FlaskConical,
   Facebook,
   Twitter,
   Instagram,
@@ -17,6 +15,17 @@ import {
   Leaf,
   Tractor,
   Sparkles,
+  CheckCircle,
+  Calendar,
+  Eye,
+  Scissors,
+  ThumbsUp,
+  Sun,
+  Wind,
+  Moon,
+  Ruler,
+  Droplets,
+  Star,
 } from "lucide-react";
 import { FaWrench } from "react-icons/fa";
 import { LuTrendingUp } from "react-icons/lu";
@@ -25,17 +34,7 @@ import { LuTrendingUp } from "react-icons/lu";
 export const navLinks = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
-  {
-    name: "Products",
-    href: "/products",
-    dropdown: [
-      "Vanilla-Pods-Extraction-Grade",
-      "Vanilla-Pods-Gourmet-Grade",
-      "Vanilla Seeds",
-      "Vanilla Extracts",
-      "Vanilla Powder",
-    ],
-  },
+  { name: "Products", href: "/products" },
   { name: "Services", href: "/services" },
   { name: "Vanilla Process", href: "/vanilla-process" },
   { name: "Contact", href: "/contact" },
@@ -682,28 +681,233 @@ export const features = [
 // Values
 export const values = [
   {
+    icon: Eye,
+    title: "Our Vision",
+    description:
+      "To be the world's most trusted source of premium Indian agricultural products, setting global standards in quality, sustainability, and ethical trade.",
+    color: "primary",
+  },
+  {
     icon: Target,
     title: "Our Mission",
     description:
-      "To bridge the gap between Indian farmers and global markets, ensuring fair trade and premium quality.",
+      "To bridge Indian farmers with global markets through transparent partnerships, innovative solutions, and unwavering commitment to excellence in every grain we export.",
+    color: "secondary",
   },
   {
-    icon: Users,
-    title: "Our Vision",
+    icon: Heart,
+    title: "Our Purpose",
     description:
-      "To become the most trusted agricultural export company, known for quality, reliability, and sustainability.",
-  },
-  {
-    icon: Leaf,
-    title: "Our Values",
-    description:
-      "Integrity, sustainability, and excellence in every grain we export and every relationship we build.",
+      "To create lasting value for farmers, partners, and communities while preserving India's agricultural heritage for future generations through sustainable practices.",
+    color: "earth",
   },
 ];
 
-// Highlights
-export const highlights = [
+// Home Highlights
+export const homeHighlights = [
   "Best Quality Productions",
   "Best Quality Vanilla",
   "Natural Healthy Products",
+];
+
+// About Highlights
+export const aboutHighlights = [
+  "State-of-the-art processing and packaging facilities",
+  "ISO 22000 and HACCP certified operations",
+  "Sustainable and eco-friendly farming practices",
+  "Complete traceability from farm to destination",
+  "24/7 customer support",
+];
+
+// Projects
+export const projects = [
+  {
+    id: 1,
+    title: "20,000 Green Houses for Vanilla Plantation",
+    description:
+      "We have laid the foundations for a project where we are working to set up 20,000 Greenhouses for Vanilla plantations before the year 2025. Our hope is that this initiative will allow Sri Lanka’s Vanilla export sector to grow to a value of USD 1 Billion, helping bring foreign revenue to the country as well as creating a brand for Sri Lankan vanilla, similar to the popularity of Ceylon Tea. This project will massively boost Sri Lanka’s agro export sector overall as our crops will be organically grown, setting a great example. We will also create many job opportunities over the course of this, and help the economies of the places we have put this project in motion.",
+    image: "/src/assets/about/greenhouse.jpg",
+    date: "2025",
+  },
+];
+
+// Certifications
+export const certifications = [
+  {
+    name: "ISO 22000:2018",
+    type: "Food Safety Management",
+    icon: Shield,
+    description: "International standard for food safety management systems",
+    color: "primary",
+  },
+  {
+    name: "HACCP",
+    type: "Hazard Analysis",
+    icon: FileCheck,
+    description: "Systematic preventive approach to food safety",
+    color: "secondary",
+  },
+  {
+    name: "USDA Organic",
+    type: "Organic Certification",
+    icon: Leaf,
+    description: "Certified organic products for US markets",
+    color: "green",
+  },
+  {
+    name: "FSSAI",
+    type: "Food Safety License",
+    icon: CheckCircle,
+    description: "Food Safety and Standards Authority of India",
+    color: "blue",
+  },
+  {
+    name: "APEDA",
+    type: "Export Registration",
+    icon: Globe,
+    description: "Agricultural and Processed Food Export Development Authority",
+    color: "purple",
+  },
+  {
+    name: "Spices Board",
+    type: "Quality Certification",
+    icon: Award,
+    description: "Certified exporter under Spices Board of India",
+    color: "orange",
+  },
+];
+
+// Products Stats
+export const productStats = [
+  { icon: Package, value: "10+", label: "Products" },
+  { icon: Award, value: "Premium", label: "Quality" },
+  { icon: Leaf, value: "Organic", label: "Options" },
+];
+
+// Sourcing Criteria
+export const sourcingCriteria = [
+  {
+    icon: Calendar,
+    title: "Optimal Timing",
+    description:
+      "Beans harvested 8-9 months after pollination when tips turn yellow",
+  },
+  {
+    icon: Eye,
+    title: "Visual Inspection",
+    description:
+      "Each bean individually inspected for color, size, and maturity",
+  },
+  {
+    icon: Scissors,
+    title: "Careful Harvesting",
+    description: "Hand-picked using specialized techniques to prevent damage",
+  },
+  {
+    icon: ThumbsUp,
+    title: "Quality Selection",
+    description:
+      "Only beans meeting our strict criteria are selected for processing",
+  },
+];
+
+// Sun Drying Steps
+export const sundryingSteps = [
+  {
+    step: 1,
+    title: "Hot Water Bath (Killing)",
+    duration: "2-3 minutes",
+    temp: "60-65°C",
+    description:
+      "Beans are immersed in hot water to stop vegetative growth and initiate enzymatic processes",
+  },
+  {
+    step: 2,
+    title: "Sun Exposure",
+    duration: "2-3 hours",
+    temp: "Direct sunlight",
+    description:
+      "Beans are spread on blankets and exposed to direct sunlight for initial moisture reduction",
+  },
+  {
+    step: 3,
+    title: "Blanket Wrapping",
+    duration: "Overnight",
+    temp: "Retained heat",
+    description:
+      "Hot beans are wrapped in blankets to retain heat and begin the sweating process",
+  },
+];
+
+// Shade Drying Indicators
+export const shadedryingDailyCycle = [
+  {
+    time: "Morning",
+    icon: Sun,
+    activity: "Sun Exposure",
+    duration: "2-3 hours",
+    description: "Beans spread on racks in morning sunlight for gentle warming",
+  },
+  {
+    time: "Afternoon",
+    icon: Wind,
+    activity: "Shade Rest",
+    duration: "Rest period",
+    description: "Moved to shaded area to prevent overheating during peak sun",
+  },
+  {
+    time: "Night",
+    icon: Moon,
+    activity: "Sweating",
+    duration: "12-14 hours",
+    description: "Wrapped in blankets inside wooden boxes to sweat overnight",
+  },
+];
+
+// Conditioning Stages
+export const conditioningStages = [
+  {
+    month: "Month 1-2",
+    title: "Initial Conditioning",
+    moisture: "25-30%",
+    description:
+      "Beans stored in paper-lined boxes, flavor compounds begin stabilizing",
+  },
+  {
+    month: "Month 3-4",
+    title: "Flavor Development",
+    moisture: "20-25%",
+    description:
+      "Complex flavor notes develop, vanilla aroma intensifies significantly",
+  },
+  {
+    month: "Month 5-6",
+    title: "Final Maturation",
+    moisture: "18-22%",
+    description: "Optimal flavor profile achieved, beans ready for grading",
+  },
+];
+
+// Sorting Criteria
+export const sortingCriteria = [
+  {
+    icon: Ruler,
+    title: "Length",
+    description: "Beans measured and sorted by length (12-20+ cm)",
+  },
+  {
+    icon: Eye,
+    title: "Appearance",
+    description: "Visual inspection for color, oiliness, and defects",
+  },
+  {
+    icon: Droplets,
+    title: "Moisture",
+    description: "Tested to ensure optimal moisture content",
+  },
+  {
+    icon: Star,
+    title: "Aroma",
+    description: "Evaluated for strength and quality of vanilla scent",
+  },
 ];

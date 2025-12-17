@@ -19,7 +19,7 @@ const Products = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-6">
             Premium Export Quality
-            <span className="block gradient-text">Agricultural Products</span>
+            <span className="block gradient-text">Vanilla Products</span>
           </h2>
           <p className="text-lg text-gray-600">
             We export a wide range of agricultural products that meet
@@ -30,7 +30,7 @@ const Products = () => {
 
         {/* Products Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {products.slice(0, 8).map((product, index) => (
+          {products.slice(0, 4).map((product, index) => (
             <div
               key={product.id}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 card-hover"

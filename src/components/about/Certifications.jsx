@@ -1,59 +1,8 @@
 import React from 'react'
 import { Shield, Award, CheckCircle, FileCheck, Leaf, Globe } from 'lucide-react'
+import { certifications } from '../../data/content'
 
 const Certifications = () => {
-  const certifications = [
-    {
-      name: "ISO 22000:2018",
-      type: "Food Safety Management",
-      icon: Shield,
-      description: "International standard for food safety management systems",
-      color: "primary"
-    },
-    {
-      name: "HACCP",
-      type: "Hazard Analysis",
-      icon: FileCheck,
-      description: "Systematic preventive approach to food safety",
-      color: "secondary"
-    },
-    {
-      name: "USDA Organic",
-      type: "Organic Certification",
-      icon: Leaf,
-      description: "Certified organic products for US markets",
-      color: "green"
-    },
-    {
-      name: "FSSAI",
-      type: "Food Safety License",
-      icon: CheckCircle,
-      description: "Food Safety and Standards Authority of India",
-      color: "blue"
-    },
-    {
-      name: "APEDA",
-      type: "Export Registration",
-      icon: Globe,
-      description: "Agricultural and Processed Food Export Development Authority",
-      color: "purple"
-    },
-    {
-      name: "Spices Board",
-      type: "Quality Certification",
-      icon: Award,
-      description: "Certified exporter under Spices Board of India",
-      color: "orange"
-    }
-  ]
-
-  const memberships = [
-    "Federation of Indian Export Organisations (FIEO)",
-    "All India Spices Exporters Forum",
-    "Grain & Feed Trade Association (GAFTA)",
-    "Indian Oilseeds and Produce Export Promotion Council",
-    "Pulses Exporters Association"
-  ]
 
   return (
     <section className="section-padding bg-gray-900 relative overflow-hidden">
@@ -118,40 +67,6 @@ const Certifications = () => {
                   <p className="text-gray-400 text-sm">{cert.description}</p>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Memberships */}
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-12">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Industry Memberships</h3>
-            <p className="text-gray-400">Proud member of leading trade organizations</p>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-4">
-            {memberships.map((membership, index) => (
-              <div 
-                key={index}
-                className="px-5 py-3 bg-white/10 rounded-full text-white/80 text-sm font-medium border border-white/10 hover:border-primary-500/50 hover:bg-white/15 transition-all duration-300"
-              >
-                {membership}
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
-          {[
-            { value: "100%", label: "Traceability" },
-            { value: "50+", label: "Quality Tests" },
-            { value: "Zero", label: "Recalls" },
-            { value: "99.9%", label: "Compliance Rate" }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-4xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-gray-400">{stat.label}</div>
             </div>
           ))}
         </div>

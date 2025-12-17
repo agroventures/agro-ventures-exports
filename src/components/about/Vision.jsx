@@ -1,32 +1,10 @@
 import React from 'react'
 import { Target, Eye, Heart, Leaf, Globe, Shield, Sparkles, TrendingUp } from 'lucide-react'
+import { values } from '../../data/content'
 
 const Vision = () => {
-  const cards = [
-    {
-      icon: Eye,
-      title: "Our Vision",
-      description: "To be the world's most trusted source of premium Indian agricultural products, setting global standards in quality, sustainability, and ethical trade.",
-      color: "primary",
-      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4e7?w=600&q=80"
-    },
-    {
-      icon: Target,
-      title: "Our Mission",
-      description: "To bridge Indian farmers with global markets through transparent partnerships, innovative solutions, and unwavering commitment to excellence in every grain we export.",
-      color: "secondary",
-      image: "https://images.unsplash.com/photo-1592982537447-6f2a6a0c7c10?w=600&q=80"
-    },
-    {
-      icon: Heart,
-      title: "Our Purpose",
-      description: "To create lasting value for farmers, partners, and communities while preserving India's agricultural heritage for future generations through sustainable practices.",
-      color: "earth",
-      image: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80"
-    }
-  ]
 
-  const values = [
+  const coreValues = [
     {
       icon: Shield,
       title: "Integrity",
@@ -86,18 +64,13 @@ const Vision = () => {
 
         {/* Vision/Mission/Purpose Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
-          {cards.map((card, index) => (
+          {values.map((card, index) => (
             <div 
               key={index}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 card-hover"
             >
               {/* Image Header */}
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
                 <div className={`absolute inset-0 ${
                   card.color === 'primary' ? 'bg-primary-600/80' :
                   card.color === 'secondary' ? 'bg-secondary-600/80' :
@@ -148,7 +121,7 @@ const Vision = () => {
             </div>
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {values.map((value, index) => (
+              {coreValues.map((value, index) => (
                 <div 
                   key={index}
                   className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-primary-500/50 transition-all duration-300"

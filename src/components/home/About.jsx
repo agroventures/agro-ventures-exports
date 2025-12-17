@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircle, ArrowRight } from "lucide-react";
-import { highlights, values } from "../../data/content";
+import { homeHighlights, values } from "../../data/content";
 
 const About = () => {
   return (
@@ -44,7 +44,7 @@ const About = () => {
 
             {/* Highlights */}
             <div className="grid sm:grid-cols-2 gap-4">
-              {highlights.map((item, index) => (
+              {homeHighlights.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-center space-x-3 p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
@@ -110,26 +110,6 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Values Section */}
-        <div className="mt-24 grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 card-hover"
-            >
-              <div className="w-16 h-16 bg-primary-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-600 transition-colors duration-300">
-                <value.icon className="w-8 h-8 text-primary-600 group-hover:text-white transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                {value.title}
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                {value.description}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

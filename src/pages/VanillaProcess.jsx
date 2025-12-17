@@ -22,8 +22,8 @@ const VanillaProcessPage = () => {
       <ProcessShadeDrying />
       <ProcessConditioning />
       <ProcessSorting />
-      <ProcessTimeline />
-      <QualityAssurance />
+      {/* <ProcessTimeline /> */}
+      {/* <QualityAssurance /> */}
       <Footer />
     </div>
   )

@@ -21,7 +21,6 @@ const ProcessOverview = () => {
       icon: Leaf,
       title: "Sourcing",
       subtitle: "Harvesting Premium Beans",
-      duration: "Day 1",
       temperature: "Fresh",
       description: "Hand-picking mature vanilla beans at optimal ripeness from our partner farms",
       color: "green",
@@ -33,7 +32,6 @@ const ProcessOverview = () => {
       icon: Sun,
       title: "Sun Drying",
       subtitle: "Killing Process",
-      duration: "2-3 Hours",
       temperature: "60-65°C",
       description: "Brief exposure to hot water followed by sun drying to stop vegetative growth",
       color: "yellow",
@@ -45,7 +43,6 @@ const ProcessOverview = () => {
       icon: Wind,
       title: "Shade Drying",
       subtitle: "Sweating Process",
-      duration: "2-3 Weeks",
       temperature: "35-40°C",
       description: "Beans are wrapped and stored to sweat, developing their characteristic aroma",
       color: "blue",
@@ -57,7 +54,6 @@ const ProcessOverview = () => {
       icon: Timer,
       title: "Conditioning",
       subtitle: "Flavor Development",
-      duration: "3-6 Months",
       temperature: "Ambient",
       description: "Extended storage period allowing complex flavors and aromas to fully develop",
       color: "purple",
@@ -69,7 +65,6 @@ const ProcessOverview = () => {
       icon: Award,
       title: "Sorting",
       subtitle: "Quality Grading",
-      duration: "Final Stage",
       temperature: "Controlled",
       description: "Expert grading and sorting by size, appearance, and vanillin content",
       color: "amber",
@@ -181,10 +176,6 @@ const ProcessOverview = () => {
               {/* Duration & Temp */}
               <div className="flex items-center justify-center space-x-3 text-xs">
                 <span className="flex items-center text-gray-500">
-                  <Clock className="w-3 h-3 mr-1" />
-                  {step.duration}
-                </span>
-                <span className="flex items-center text-gray-500">
                   <Thermometer className="w-3 h-3 mr-1" />
                   {step.temperature}
                 </span>
@@ -204,8 +195,7 @@ const ProcessOverview = () => {
         </div>
 
         {/* Process Summary */}
-        <div className="bg-linear-to-r from-amber-500 to-amber-600 rounded-3xl p-8 md:p-12 relative overflow-hidden">
-          {/* Background Pattern */}
+        {/* <div className="bg-linear-to-r from-amber-500 to-amber-600 rounded-3xl p-8 md:p-12 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute inset-0" style={{
               backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -227,7 +217,7 @@ const ProcessOverview = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )

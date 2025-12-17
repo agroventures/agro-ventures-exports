@@ -1,23 +1,12 @@
 import React from "react";
 import {
   Quote,
-  ArrowRight,
   CheckCircle2,
   Sprout,
-  Target,
-  Heart,
 } from "lucide-react";
-import { yearsOfExperience } from "../../data/content";
+import { aboutHighlights, yearsOfExperience } from "../../data/content";
 
 const CompanyStory = () => {
-  const highlights = [
-    "State-of-the-art processing and packaging facilities",
-    "ISO 22000 and HACCP certified operations",
-    "Sustainable and eco-friendly farming practices",
-    "Complete traceability from farm to destination",
-    "24/7 customer support",
-  ];
-
   return (
     <section
       id="story"
@@ -129,7 +118,7 @@ const CompanyStory = () => {
 
             {/* Highlights */}
             <div className="grid sm:grid-cols-2 gap-3">
-              {highlights.map((item, index) => (
+              {aboutHighlights.map((item, index) => (
                 <div
                   key={index}
                   className="flex items-start space-x-3 p-3 rounded-xl hover:bg-primary-50 transition-colors group"
@@ -139,17 +128,6 @@ const CompanyStory = () => {
                 </div>
               ))}
             </div>
-
-            {/* CTA */}
-            {/* <div className="flex flex-wrap gap-4 pt-4">
-              <a
-                href="#plantations"
-                className="inline-flex items-center text-primary-600 font-semibold hover:text-primary-700 group"
-              >
-                Explore Our Plantations
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-              </a>
-            </div> */}
           </div>
         </div>
       </div>

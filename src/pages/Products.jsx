@@ -27,16 +27,16 @@ const Products = () => {
     <div className="overflow-hidden">
       <Navbar />
       <ProductsHero />
-      <ProductCategories />
-      <FeaturedProducts onProductClick={openProductModal} />
+      {/* <ProductCategories />
+      <FeaturedProducts onProductClick={openProductModal} /> */}
       <ProductGrid onProductClick={openProductModal} />
       <Footer />
       
-      <ProductModal 
+      {/* <ProductModal 
         product={selectedProduct}
         isOpen={isModalOpen}
         onClose={closeProductModal}
-      />
+      /> */}
     </div>
   )
 }

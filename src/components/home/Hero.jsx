@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ArrowRight, ChevronDown } from 'lucide-react'
+import { ArrowDown, ArrowRight, ChevronDown } from 'lucide-react'
 import { features, slides } from '../../data/content'
 
 const Hero = () => {
@@ -59,7 +59,7 @@ const Hero = () => {
             </div>
 
             {/* Description */}
-            <p className="text-lg md:text-xl text-white/80 max-w-xl leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+            <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               {slides[currentSlide].description}
             </p>
 
@@ -67,7 +67,7 @@ const Hero = () => {
             <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
               <a href="#about" className="btn-primary group">
                 Explore
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                <ArrowDown className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
 

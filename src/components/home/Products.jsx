@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
 import { products } from "../../data/content";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   return (
@@ -72,10 +73,10 @@ const Products = () => {
 
         {/* View All Button */}
         <div className="text-center mt-12">
-          <a href="/products" className="btn-primary">
+          <Link to="/products" className="btn-primary">
             View All Products
             <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

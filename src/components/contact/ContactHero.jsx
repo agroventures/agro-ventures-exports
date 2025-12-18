@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ContactHero = () => {
   return (
@@ -19,9 +20,9 @@ const ContactHero = () => {
 
           {/* Breadcrumb */}
           <nav className="flex justify-center items-center space-x-2 text-sm text-white/60 mb-8">
-            <a href="/" className="hover:text-white transition-colors">
+            <Link to="/" className="hover:text-white transition-colors">
               Home
-            </a>
+            </Link>
             <span>/</span>
             <span className="text-primary-400">Contact Us</span>
           </nav>

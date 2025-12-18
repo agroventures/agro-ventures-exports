@@ -85,8 +85,8 @@ const ProductCategories = () => {
               />
               
               {/* Gradient Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t ${category.color} opacity-70 group-hover:opacity-80 transition-opacity`} />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-transparent to-transparent" />
+              <div className={`absolute inset-0 bg-linear-to-t ${category.color} opacity-70 group-hover:opacity-80 transition-opacity`} />
+              <div className="absolute inset-0 bg-linear-to-t from-gray-900/80 via-transparent to-transparent" />
 
               {/* Content */}
               <div className="absolute inset-0 p-6 flex flex-col justify-end">

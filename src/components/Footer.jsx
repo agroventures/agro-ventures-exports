@@ -84,9 +84,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {products.slice(0, 6).map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
+                    <Link to={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -98,9 +98,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {navLinks.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
+                    <Link to={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -112,9 +112,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {footerLinks.support.map((link, index) => (
                   <li key={index}>
-                    <a href={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
+                    <Link to={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

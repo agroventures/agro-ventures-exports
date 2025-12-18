@@ -1,5 +1,6 @@
 import React from 'react'
 import { Linkedin, Twitter, Mail, Quote } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Team = () => {
   const leadership = [
@@ -117,15 +118,15 @@ const Team = () => {
                   
                   {/* Social Links - Show on Hover */}
                   <div className="absolute bottom-4 left-4 right-4 flex justify-center space-x-3 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                    <a href={member.linkedin} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
+                    <Link to={member.linkedin} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
                       <Linkedin className="w-5 h-5" />
-                    </a>
-                    <a href={member.twitter} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
+                    </Link>
+                    <Link to={member.twitter} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
                       <Twitter className="w-5 h-5" />
-                    </a>
-                    <a href={`mailto:${member.email}`} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
+                    </Link>
+                    <Link to={`mailto:${member.email}`} className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white hover:text-primary-600 transition-colors">
                       <Mail className="w-5 h-5" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
 

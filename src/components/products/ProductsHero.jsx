@@ -4,6 +4,7 @@ import {
   ArrowDown,
 } from "lucide-react";
 import { productStats } from "../../data/content";
+import { Link } from "react-router-dom";
 
 const ProductsHero = () => {
   return (
@@ -23,9 +24,9 @@ const ProductsHero = () => {
         <div className="max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex justify-center items-center space-x-2 text-sm text-white/60 mb-8">
-            <a href="/" className="hover:text-white transition-colors">
+            <Link to="/" className="hover:text-white transition-colors">
               Home
-            </a>
+            </Link>
             <span>/</span>
             <span className="text-primary-400">Products</span>
           </nav>

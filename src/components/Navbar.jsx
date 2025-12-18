@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { navLinks } from '../data/content'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -45,8 +46,7 @@ const Navbar = () => {
                 onMouseEnter={() => link.dropdown && setActiveDropdown(link.name)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <a
-                  href={link.href}
+                <Link to={link.href}
                   className={`flex items-center px-4 py-2 rounded-full font-medium transition-all duration-300 ${
                     isScrolled 
                       ? 'text-gray-700 hover:text-primary-600 hover:bg-primary-50' 
@@ -55,7 +55,7 @@ const Navbar = () => {
                 >
                   {link.name}
                   {link.dropdown && <ChevronDown className="w-4 h-4 ml-1" />}
-                </a>
+                </Link>
                 
                 {link.dropdown && activeDropdown === link.name && (
                   <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden animate-fade-in-up">
@@ -91,14 +91,14 @@ const Navbar = () => {
         }`}>
           <div className="bg-white rounded-2xl shadow-xl p-4 space-y-2">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 onClick={() => setIsOpen(false)}
                 className="block px-4 py-3 text-gray-700 hover:bg-primary-50 hover:text-primary-600 rounded-xl font-medium transition-colors"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

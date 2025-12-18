@@ -7,6 +7,7 @@ import {
   ArrowRight,
   CheckCircle
 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const ServicesProcess = () => {
   const steps = [
@@ -106,10 +107,10 @@ const ServicesProcess = () => {
           <p className="text-gray-400 mb-6">
             Ready to get started? Contact us today for a free consultation.
           </p>
-          <a href="/contact" className="btn-primary">
+          <Link to="/contact" className="btn-primary">
             Get Free Consultation
             <ArrowRight className="w-5 h-5 ml-2" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

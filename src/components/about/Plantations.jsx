@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { MapPin, Thermometer, Droplets, Mountain, ArrowRight, ChevronLeft, ChevronRight, Leaf, Sun, Wind } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 const Plantations = () => {
   const [activeRegion, setActiveRegion] = useState(0)
@@ -236,13 +237,13 @@ const Plantations = () => {
             </div>
 
             {/* CTA */}
-            <a 
-              href="/contact" 
+            <Link 
+              to="/contact" 
               className="inline-flex items-center text-primary-400 font-semibold hover:text-primary-300 group"
             >
               Schedule a Farm Visit
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-            </a>
+            </Link>
           </div>
         </div>
 

@@ -9,6 +9,7 @@ import {
   Award,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProcessHero = () => {
   return (
@@ -42,9 +43,9 @@ const ProcessHero = () => {
         <div className="max-w-4xl text-center">
           {/* Breadcrumb */}
           <nav className="flex justify-center items-center space-x-2 text-sm text-white/60 mb-8">
-            <a href="/" className="hover:text-white transition-colors">
+            <Link to="/" className="hover:text-white transition-colors">
               Home
-            </a>
+            </Link>
             <span>/</span>
             <span className="text-amber-400">Vanilla Process</span>
           </nav>

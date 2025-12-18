@@ -8,6 +8,7 @@ import {
   CheckCircle,
   Loader2,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -123,12 +124,12 @@ const ContactForm = () => {
                   hours. Check your email for a confirmation.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
-                  <a href="/" className="btn-secondary py-3 px-6">
+                  <Link to="/" className="btn-secondary py-3 px-6">
                     Back to Home
-                  </a>
-                  <a href="#" className="btn-primary py-3 px-6">
+                  </Link>
+                  <Link to="/products" className="btn-primary py-3 px-6">
                     View Products
-                  </a>
+                  </Link>
                 </div>
               </div>
             ) : (
@@ -294,13 +295,13 @@ const ContactForm = () => {
                 {/* Privacy Note */}
                 {/* <p className="text-center text-gray-500 text-sm">
                   By submitting this form, you agree to our{" "}
-                  <a href="#" className="text-primary-600 hover:underline">
+                  <Link to="#" className="text-primary-600 hover:underline">
                     Privacy Policy
-                  </a>{" "}
+                  </Link>{" "}
                   and{" "}
-                  <a href="#" className="text-primary-600 hover:underline">
+                  <Link to="#" className="text-primary-600 hover:underline">
                     Terms of Service
-                  </a>
+                  </Link>
                   .
                 </p> */}
               </form>

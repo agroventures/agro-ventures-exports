@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const NotFound = () => {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center text-center">
@@ -5,12 +7,11 @@ const NotFound = () => {
         <p className="text-xl mt-4 text-gray-600">
           Page not found
         </p>
-        <a
-          href="/"
+        <Link to="/"
           className="mt-6 text-blue-600 hover:underline"
         >
           Go back home
-        </a>
+        </Link>
       </div>
     );
   };

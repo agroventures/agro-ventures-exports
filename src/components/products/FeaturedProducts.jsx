@@ -42,7 +42,7 @@ const FeaturedProducts = () => {
   ]
 
   return (
-    <section className="section-padding bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section className="section-padding bg-linear-to-b from-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-20 right-20 w-72 h-72 bg-primary-100/50 rounded-full blur-3xl" />
       <div className="absolute bottom-20 left-20 w-80 h-80 bg-secondary-100/50 rounded-full blur-3xl" />
@@ -79,7 +79,7 @@ const FeaturedProducts = () => {
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-linear-to-t from-gray-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 {/* Featured Badge */}
                 <div className="absolute top-4 left-4">

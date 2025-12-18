@@ -6,6 +6,7 @@ import {
   FileCheck,
   ChevronDown
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicesHero = () => {
   return (
@@ -26,7 +27,7 @@ const ServicesHero = () => {
 
           {/* Breadcrumb */}
           <nav className="flex justify-center items-center space-x-2 text-sm text-white/60 mb-8">
-            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <Link to="/" className="hover:text-white transition-colors">Home</Link>
             <span>/</span>
             <span className="text-primary-400">Our Services</span>
           </nav>

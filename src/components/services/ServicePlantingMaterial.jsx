@@ -10,6 +10,7 @@ import {
   Droplets,
   ArrowRight,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServicePlantingMaterial = () => {
   const materials = [
@@ -181,13 +182,13 @@ const ServicePlantingMaterial = () => {
               ))}
             </div>
 
-            {/* <a
-              href="/contact"
+            {/* <Link
+              to="/contact"
               className="btn-primary bg-secondary-600 hover:bg-secondary-700 shadow-secondary-600/30"
             >
               Order Planting Material
               <ArrowRight className="w-5 h-5 ml-2" />
-            </a> */}
+            </Link> */}
           </div>
         </div>
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import { services } from '../../data/content'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
 
@@ -64,9 +65,9 @@ const Services = () => {
             <p className="text-white text-lg">
               Need a custom export solution?
             </p>
-            <a href="/contact" className="btn-primary py-3 px-6">
+            <Link to="/contact" className="btn-primary py-3 px-6">
               Contact Our Team
-            </a>
+            </Link>
           </div>
         </div> */}
       </div>

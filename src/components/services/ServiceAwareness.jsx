@@ -12,6 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { yearsOfExperience } from "../../data/content";
+import { Link } from "react-router-dom";
 
 const ServiceAwareness = () => {
   const programs = [
@@ -179,13 +180,13 @@ const ServiceAwareness = () => {
                   Join our upcoming awareness programs
                 </p>
               </div>
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center mt-4 md:mt-0 text-white font-semibold hover:text-primary-200 group"
               >
                 View All Events
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
-              </a>
+              </Link>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">

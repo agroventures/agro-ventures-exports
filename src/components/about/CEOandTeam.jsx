@@ -56,7 +56,7 @@ const CEOAndTeam = () => {
             <div className="lg:w-2/5 p-10 text-center relative">
               <div className="absolute top-4 left-4 bg-linear-to-r from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full shadow-lg">
                 <div className='flex justify-center gap-2'>
-                  <Crown/> CEO
+                  <Crown /> CEO
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ const CEOAndTeam = () => {
 
             {/* Message */}
             <div className="lg:w-3/5 p-10 bg-linear-to-br from-stone-50 to-primary-50/50">
-              <blockquote className="text-stone-700 text-lg leading-relaxed whitespace-pre-line">
+              <blockquote className="text-stone-700 text-lg whitespace-pre-line">
                 {ceoData.message}
               </blockquote>
 

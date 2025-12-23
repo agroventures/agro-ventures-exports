@@ -40,17 +40,16 @@ const ServicesHero = () => {
 
           {/* Heading */}
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white leading-tight mb-6">
-            Expert Services
-            <span className="block text-primary-400 mt-2">
-              For Farmers
-            </span>
+            Premium {" "}
+            <span className="text-primary-400 mt-2">
+              Quality {" "}
+            </span><br/>
+            Services
           </h1>
 
           {/* Description */}
           <p className="text-xl text-white/80 leading-relaxed mx-auto max-w-3xl mb-10">
-            From awareness programs to contract farming, we provide end-to-end support
-            to help farmers succeed in high-value crop cultivation and achieve
-            sustainable growth.
+            We source the finest natural ingredients, ensuring every drop of flavor is of premium export quality.
           </p>
 
           {/* CTA Buttons */}

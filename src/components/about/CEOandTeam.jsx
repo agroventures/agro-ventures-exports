@@ -75,7 +75,7 @@ const CEOAndTeam = () => {
             </div>
 
             {/* Message */}
-            <div className="lg:w-3/5 p-10 bg-linear-to-br from-stone-50 to-primary-50/50 text-justify">
+            <div className="lg:w-3/5 p-10 bg-linear-to-br from-stone-50 to-primary-50/50">
               <blockquote className="text-stone-700 text-lg leading-relaxed whitespace-pre-line">
                 {ceoData.message}
               </blockquote>

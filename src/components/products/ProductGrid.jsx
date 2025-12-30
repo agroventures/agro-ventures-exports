@@ -79,38 +79,39 @@ const ProductGrid = ({ onProductClick }) => {
         {filteredProducts.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {filteredProducts.slice(0, visibleProductCount).map((product) => (
-              <div
-                key={product.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 card-hover cursor-pointer"
-                onClick={() => onProductClick(product)}
-              >
-                {/* Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                </div>
+              <a key={product.id} target="_blank" href={`${import.meta.env.VITE_VANILLA_SHOP_URL}/products/${product.slug}`}>
+                <div
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 card-hover cursor-pointer"
+                  onClick={() => onProductClick(product)}
+                >
+                  {/* Image */}
+                  <div className="relative h-48 overflow-hidden">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-gray-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
 
-                {/* Content */}
-                <div className="p-4">
-                  <h3 className="font-bold text-gray-900 mb-1 group-hover:text-primary-600 transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-gray-500 text-sm line-clamp-2 mb-3">
-                    {product.excerpt?.split(" ").slice(0, 10).join(" ")}...
-                  </p>
-                </div>
+                  {/* Content */}
+                  <div className="p-4">
+                    <h3 className="font-bold text-gray-900 mb-1 group-hover:text-primary-600 transition-colors">
+                      {product.name}
+                    </h3>
+                    <p className="text-gray-500 text-sm line-clamp-2 mb-3">
+                      {product.excerpt?.split(" ").slice(0, 10).join(" ")}...
+                    </p>
+                  </div>
 
-                <div className="flex items-center gap-3 text-primary-700 cursor-pointer p-4">
-                  <p className="font-semibold group-hover:underline">
-                    View Product
-                  </p>
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center gap-3 text-primary-700 cursor-pointer p-4">
+                    <p className="font-semibold group-hover:underline">
+                      View Product
+                    </p>
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         ) : (

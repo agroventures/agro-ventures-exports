@@ -109,6 +109,7 @@ export const products = [
   {
     id: 1,
     name: "Non-Alcoholic Vanilla Extract",
+    slug: "non-alcoholic-vanilla-extract",
     image: "/images/products/NON_ALCOHOLIC_VANILLA_EXTRACT.jpg",
     excerpt:
       "Indulge in the exquisite essence of pure, hand-selected Sri Lankan vanilla beans, meticulously extracted through a gentle alcohol-free process.",
@@ -156,6 +157,7 @@ export const products = [
   {
     id: 2,
     name: "Alcoholic Vanilla Extract",
+    slug: "alcoholic-vanilla-extract",
     image: "/images/products/ALCOHOLIC_VANILLA_EXTRACT.jpg",
     excerpt:
       "Experience the rich, complex aroma of hand-selected Sri Lankan vanilla beans carefully macerated in high-quality food-grade alcohol to create a truly authentic vanilla extract.",
@@ -195,6 +197,7 @@ export const products = [
   {
     id: 3,
     name: "Natural Vanilla Paste",
+    slug: "natural-vanilla-paste",
     image: "/images/products/VANILLA_PASTE.jpg",
     excerpt:
       "Experience the rich, full-bodied flavor of hand-harvested Sri Lankan vanilla beans in a convenient, ready-to-use paste.",
@@ -235,7 +238,8 @@ export const products = [
   },
   {
     id: 4,
-    name: "Natural Vanilla Powder ",
+    name: "Natural Vanilla Powder",
+    slug: "natural-vanilla-powder",
     image: "/images/products/VANILLA_POWDER.png",
     excerpt:
       "Discover the delicate, aromatic essence of hand-selected Sri Lankan vanilla beans in a finely ground, convenient powder form.",
@@ -281,7 +285,8 @@ export const products = [
   },
   {
     id: 5,
-    name: "Natural Vanilla Syrup  ",
+    name: "Natural Vanilla Syrup",
+    slug: "natural-vanilla-syrup",
     image: "/images/products/VANILLA_SYRUP.jpg",
     excerpt:
       "Indulge in the smooth, rich sweetness of hand-selected Sri Lankan vanilla beans infused into a velvety natural syrup.",
@@ -322,6 +327,7 @@ export const products = [
   {
     id: 6,
     name: "100% Vanilla Bathing Bar – SKIN AND WELLNESS",
+    slug: "vanilla-bathing-bar",
     image: "/images/products/VANILLA_BATHING_BAR.png",
     excerpt:
       "Experience the luxury of pure vanilla-infused skincare with our 100% Vanilla Bathing Bars — crafted to cleanse, nourish, and rejuvenate your skin naturally.",
@@ -360,6 +366,7 @@ export const products = [
   {
     id: 7,
     name: "Hand Made Vanilla Based Soap",
+    slug: "handmade-vanilla-soap",
     image: "/images/products/HAND_MADE_SOAP.jpg",
     excerpt:
       "Indulge in the luxurious care of handmade soaps enriched with premium natural vanilla.",
@@ -404,6 +411,7 @@ export const products = [
   {
     id: 8,
     name: "Mood Fixing Spray",
+    slug: "natural-vanilla-mood-fixing-spray",
     image: "/images/products/MOOD_FIXING_SPRAY.jpg",
     excerpt:
       "Elevate your senses and enhance your mood with our Natural Vanilla-Based Mood Fixing Spray.",
@@ -448,6 +456,7 @@ export const products = [
   {
     id: 9,
     name: "Natural Vanilla Tea",
+    slug: "natural-vanilla-infused-tea",
     image: "/images/products/VANILLA_TEA.jpg",
     excerpt:
       "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",
@@ -487,7 +496,8 @@ export const products = [
   },
   {
     id: 10,
-    name: "Vanillac & Cinnamon Blended Tea",
+    name: "Vanilla & Cinnamon Blended Tea",
+    slug: "vanilla-and-cinnamon-blended-tea",
     image: "/images/products/VANILLA_CINNAMON_TEA.png",
     excerpt:
       "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",
@@ -528,6 +538,7 @@ export const products = [
   {
     id: 11,
     name: "Natural Vanilla Infused Tea Sachet Pack – 30",
+    slug: "natural-vanilla-infused-tea-sachet-pack",
     image: "/images/products/TEA_SACHET.png",
     excerpt:
       "Enjoy the convenience of 30 individually packed sachets of premium Ceylon tea, delicately infused with pure Sri Lankan vanilla.",
@@ -564,6 +575,7 @@ export const products = [
   {
     id: 11,
     name: "Natural Vanilla Beans",
+    slug: "premium-quality-vanilla-pods",
     image: "/images/products/VANILLA_PODS.jpg",
     excerpt:
       "Experience the unmatched richness of hand-selected Sri Lankan vanilla pods, cultivated under ideal conditions to ensure superior aroma, flavor, and moisture content.",
@@ -833,41 +845,41 @@ export const certifications = [
     description: "International standard for food safety management systems",
     color: "primary",
   },
-  {
-    name: "HACCP",
-    type: "Hazard Analysis",
-    icon: FileCheck,
-    description: "Systematic preventive approach to food safety",
-    color: "secondary",
-  },
-  {
-    name: "USDA Organic",
-    type: "Organic Certification",
-    icon: Leaf,
-    description: "Certified organic products for US markets",
-    color: "green",
-  },
-  {
-    name: "FSSAI",
-    type: "Food Safety License",
-    icon: CheckCircle,
-    description: "Food Safety and Standards Authority of India",
-    color: "blue",
-  },
-  {
-    name: "APEDA",
-    type: "Export Registration",
-    icon: Globe,
-    description: "Agricultural and Processed Food Export Development Authority",
-    color: "purple",
-  },
-  {
-    name: "Spices Board",
-    type: "Quality Certification",
-    icon: Award,
-    description: "Certified exporter under Spices Board of India",
-    color: "orange",
-  },
+  // {
+  //   name: "HACCP",
+  //   type: "Hazard Analysis",
+  //   icon: FileCheck,
+  //   description: "Systematic preventive approach to food safety",
+  //   color: "secondary",
+  // },
+  // {
+  //   name: "USDA Organic",
+  //   type: "Organic Certification",
+  //   icon: Leaf,
+  //   description: "Certified organic products for US markets",
+  //   color: "green",
+  // },
+  // {
+  //   name: "FSSAI",
+  //   type: "Food Safety License",
+  //   icon: CheckCircle,
+  //   description: "Food Safety and Standards Authority of India",
+  //   color: "blue",
+  // },
+  // {
+  //   name: "APEDA",
+  //   type: "Export Registration",
+  //   icon: Globe,
+  //   description: "Agricultural and Processed Food Export Development Authority",
+  //   color: "purple",
+  // },
+  // {
+  //   name: "Spices Board",
+  //   type: "Quality Certification",
+  //   icon: Award,
+  //   description: "Certified exporter under Spices Board of India",
+  //   color: "orange",
+  // },
 ];
 
 // Products Stats
@@ -1031,44 +1043,28 @@ export const ceoData = {
 export const teamMembers = [
   {
     id: 1,
-    name: 'Marie Andriamihaja',
+    name: 'Mr. Heshan',
     designation: 'Chief Operations Officer',
-    image: '/api/placeholder/300/300',
-    department: 'Operations',
-    description: 'Oversees all operational processes from sourcing to delivery',
-    experience: '12 years',
-    social: { linkedin: '#', email: 'marie@vanillaexports.com' }
+    image: '/images/about/no-image.png',
   },
   {
     id: 2,
-    name: 'Jean-Pierre Rakoto',
-    designation: 'Head of Quality Assurance',
-    image: '/api/placeholder/300/300',
-    department: 'Quality',
-    description: 'Ensures every vanilla bean meets our premium standards',
-    experience: '10 years',
-    social: { linkedin: '#', email: 'jp@vanillaexports.com' }
+    name: 'Mr. Chamara',
+    designation: 'Manager',
+    image: '/images/about/no-image.png',
   },
-  {
-    id: 3,
-    name: 'Sofia Ramanantsoa',
-    designation: 'Director of Client Relations',
-    image: '/api/placeholder/300/300',
-    department: 'Sales',
-    description: 'Builds lasting partnerships with global clients',
-    experience: '8 years',
-    social: { linkedin: '#', email: 'sofia@vanillaexports.com' }
-  },
-  {
-    id: 4,
-    name: 'David Randrianarisoa',
-    designation: 'Logistics Manager',
-    image: '/api/placeholder/300/300',
-    department: 'Logistics',
-    description: 'Manages international shipping and supply chain',
-    experience: '9 years',
-    social: { linkedin: '#', email: 'david@vanillaexports.com' }
-  }
+  // {
+  //   id: 3,
+  //   name: 'Sofia Ramanantsoa',
+  //   designation: 'Director of Client Relations',
+  //   image: '/images/about/no-image.png',
+  // },
+  // {
+  //   id: 4,
+  //   name: 'David Randrianarisoa',
+  //   designation: 'Logistics Manager',
+  //   image: '/images/about/no-image.png',
+  // }
 ];
 
 // Core Values

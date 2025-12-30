@@ -11,7 +11,7 @@ const Certifications = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary-500/10 rounded-full blur-3xl" />
       </div>
-      
+
       {/* Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -31,35 +31,35 @@ const Certifications = () => {
             <span className="block text-primary-400">Globally Recognized</span>
           </h2>
           <p className="text-lg text-gray-300">
-            Our commitment to quality is backed by internationally recognized certifications 
+            Our commitment to quality is backed by internationally recognized certifications
             and industry memberships that ensure the highest standards.
           </p>
         </div>
 
         {/* Certifications Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid gap-6 mb-16
+                grid-cols-[repeat(auto-fit,minmax(320px,1fr))]
+                justify-items-center">
           {certifications.map((cert, index) => (
-            <div 
+            <div
               key={index}
               className="group bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-primary-500/50 transition-all duration-300 card-hover"
             >
               <div className="flex items-start gap-4">
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300 ${
-                  cert.color === 'primary' ? 'bg-primary-500/20 group-hover:bg-primary-500' :
-                  cert.color === 'secondary' ? 'bg-secondary-500/20 group-hover:bg-secondary-500' :
-                  cert.color === 'green' ? 'bg-green-500/20 group-hover:bg-green-500' :
-                  cert.color === 'blue' ? 'bg-blue-500/20 group-hover:bg-blue-500' :
-                  cert.color === 'purple' ? 'bg-purple-500/20 group-hover:bg-purple-500' :
-                  'bg-orange-500/20 group-hover:bg-orange-500'
-                }`}>
-                  <cert.icon className={`w-7 h-7 transition-colors duration-300 ${
-                    cert.color === 'primary' ? 'text-primary-400 group-hover:text-white' :
-                    cert.color === 'secondary' ? 'text-secondary-400 group-hover:text-white' :
-                    cert.color === 'green' ? 'text-green-400 group-hover:text-white' :
-                    cert.color === 'blue' ? 'text-blue-400 group-hover:text-white' :
-                    cert.color === 'purple' ? 'text-purple-400 group-hover:text-white' :
-                    'text-orange-400 group-hover:text-white'
-                  }`} />
+                <div className={`w-14 h-14 rounded-xl flex items-center justify-center shrink-0 transition-colors duration-300 ${cert.color === 'primary' ? 'bg-primary-500/20 group-hover:bg-primary-500' :
+                    cert.color === 'secondary' ? 'bg-secondary-500/20 group-hover:bg-secondary-500' :
+                      cert.color === 'green' ? 'bg-green-500/20 group-hover:bg-green-500' :
+                        cert.color === 'blue' ? 'bg-blue-500/20 group-hover:bg-blue-500' :
+                          cert.color === 'purple' ? 'bg-purple-500/20 group-hover:bg-purple-500' :
+                            'bg-orange-500/20 group-hover:bg-orange-500'
+                  }`}>
+                  <cert.icon className={`w-7 h-7 transition-colors duration-300 ${cert.color === 'primary' ? 'text-primary-400 group-hover:text-white' :
+                      cert.color === 'secondary' ? 'text-secondary-400 group-hover:text-white' :
+                        cert.color === 'green' ? 'text-green-400 group-hover:text-white' :
+                          cert.color === 'blue' ? 'text-blue-400 group-hover:text-white' :
+                            cert.color === 'purple' ? 'text-purple-400 group-hover:text-white' :
+                              'text-orange-400 group-hover:text-white'
+                    }`} />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-white mb-1">{cert.name}</h3>

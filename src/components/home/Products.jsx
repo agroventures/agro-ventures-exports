@@ -32,42 +32,43 @@ const Products = () => {
         {/* Products Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {products.slice(0, 4).map((product, index) => (
-            <div
-              key={product.id}
-              className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 card-hover"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {/* Image */}
-              <div className="relative h-56 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            <a href={`${import.meta.env.VITE_VANILLA_SHOP_URL}/products/${product.slug}`} target="_blank" key={product.id}>
+              <div
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 card-hover"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Image */}
+                <div className="relative h-56 overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                {/* Category Badge */}
-                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-primary-700 uppercase">
-                  {product.category}
+                  {/* Category Badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-primary-700 uppercase">
+                    {product.category}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
+                      {product.name}
+                    </h3>
+                  </div>
+                  <p className="text-gray-600 text-sm mb-3">
+                    {product.excerpt?.split(" ").slice(0, 10).join(" ")}...
+                  </p>
+                  <div className="flex items-center text-primary-600 gap-2 pt-3 border-t border-gray-100">
+                    <span className="text-md group-hover:underline group-hover:cursor-pointer">View</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                    {product.name}
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm mb-3">
-                  {product.excerpt?.split(" ").slice(0, 10).join(" ")}...
-                </p>
-                <div className="flex items-center text-primary-600 gap-2 pt-3 border-t border-gray-100">
-                  <span className="text-md group-hover:underline group-hover:cursor-pointer">View</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </div>
+            </a>
           ))}
         </div>
 

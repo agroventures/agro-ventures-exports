@@ -95,7 +95,9 @@ const CEOAndTeam = () => {
 
       {/* ------------------ TEAM GRID ------------------ */}
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid gap-6 mb-16
+                grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
+                justify-items-center">
           {teamMembers.map((member) => {
             const isHovered = hoveredMember === member.id;
 
@@ -114,25 +116,6 @@ const CEOAndTeam = () => {
                     alt={member.name}
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                   />
-
-                  {/* Overlay */}
-                  <div
-                    className={`absolute inset-0 bg-linear-to-t from-stone-900 via-stone-900/60 to-transparent transition-opacity
-                    ${isHovered ? 'opacity-90' : 'opacity-0'}`}
-                  >
-                    <div className="absolute bottom-4 left-4 right-4 text-white text-sm">
-                      {member.description}
-                    </div>
-                  </div>
-
-                  {/* Department */}
-                  <span
-                    className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-semibold ${getDepartmentColor(
-                      member.department
-                    )}`}
-                  >
-                    {member.department}
-                  </span>
                 </div>
 
                 {/* Content */}
@@ -142,9 +125,6 @@ const CEOAndTeam = () => {
                   </h3>
                   <p className="text-primary-600 text-sm font-medium">
                     {member.designation}
-                  </p>
-                  <p className="text-stone-500 text-sm mt-2">
-                    ⏱ {member.experience} experience
                   </p>
                 </div>
 

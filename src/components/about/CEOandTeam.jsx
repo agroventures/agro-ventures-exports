@@ -120,7 +120,7 @@ const CEOAndTeam = () => {
 
                 {/* Content */}
                 <div className="p-5">
-                  <h3 className="font-bold text-lg text-stone-800">
+                  <h3 className="font-bold text-md text-stone-800">
                     {member.name}
                   </h3>
                   <p className="text-primary-600 text-sm font-medium">

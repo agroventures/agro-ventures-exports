@@ -11,7 +11,7 @@ import {
 import { projects } from "../../data/content";
 
 const Projects = () => {
-  const [visibleCount, setVisibleCount] = useState(2);
+  const [visibleCount, setVisibleCount] = useState(3);
 
   return (
     <section
@@ -40,13 +40,11 @@ const Projects = () => {
           </p>
         </div>
 
-        <div
-          className={`mb-16 gap-8 ${
-            projects.length === 1
-              ? "flex justify-center"
-              : "grid md:grid-cols-2"
-          }`}
-        >
+
+        <div className="grid gap-8 mb-16
+                grid-cols-[repeat(auto-fit,minmax(160px,1fr))]
+                justify-items-center">
+          
           {projects.slice(0, visibleCount).map((project) => (
             <div
               key={project.id}
@@ -82,10 +80,10 @@ const Projects = () => {
                 <p className="text-gray-600 mb-6">{project.description}</p>
               </div>
 
-              <div className="flex items-center gap-3 text-primary-700 cursor-pointer p-6">
+              {/* <div className="flex items-center gap-3 text-primary-700 cursor-pointer p-6">
                 <p className="font-semibold group-hover:underline">View Details</p>
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </div>
+              </div> */}
             </div>
           ))}
         </div>

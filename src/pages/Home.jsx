@@ -31,7 +31,7 @@ export default function Home() {
       <Products />
       <Services />
       {/* <Stats /> */}
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <CTA /> */}
       {/* <Companies /> */}
       <Footer />

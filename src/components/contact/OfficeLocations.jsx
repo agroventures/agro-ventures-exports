@@ -77,7 +77,7 @@ const OfficeLocations = () => {
           {/* Office Details */}
           <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-10">
             {/* Office Header */}
-            <div className="flex items-start justify-between mb-8">
+            {/* <div className="flex items-start justify-between mb-8">
               <div>
                 <span className={`inline-block px-3 py-1 rounded-full text-xs font-semibold uppercase mb-3 ${
                   currentOffice.type === 'headquarters' ? 'bg-primary-500/20 text-primary-400' :
@@ -98,7 +98,7 @@ const OfficeLocations = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-            </div>
+            </div> */}
 
             {/* Contact Details */}
             <div className="space-y-6">

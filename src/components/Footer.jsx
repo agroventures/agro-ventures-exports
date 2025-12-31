@@ -84,9 +84,9 @@ const Footer = () => {
               <ul className="space-y-3">
                 {products.slice(0, 6).map((link, index) => (
                   <li key={index}>
-                    <Link to={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
+                    <a href={`${import.meta.env.VITE_VANILLA_SHOP_URL}/products/${link.slug}`} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
-                    </Link>
+                    </a>
                   </li>
                 ))}
               </ul>

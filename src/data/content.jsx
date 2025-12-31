@@ -833,7 +833,7 @@ export const projects = [
       "We have laid the foundations for a project where we are working to set up 20,000 Greenhouses for Vanilla plantations before the year 2025. Our hope is that this initiative will allow Sri Lanka’s Vanilla export sector to grow to a value of USD 1 Billion, helping bring foreign revenue to the country as well as creating a brand for Sri Lankan vanilla, similar to the popularity of Ceylon Tea. This project will massively boost Sri Lanka’s agro export sector overall as our crops will be organically grown, setting a great example. We will also create many job opportunities over the course of this, and help the economies of the places we have put this project in motion.",
     image: "/images/about/greenhouse.jpg",
     date: "2025",
-  },
+  }
 ];
 
 // Certifications
@@ -1043,28 +1043,28 @@ export const ceoData = {
 export const teamMembers = [
   {
     id: 1,
-    name: 'Mr. Heshan',
+    name: 'Mr. Heshan Nanayakkara',
     designation: 'Chief Operations Officer',
     image: '/images/about/no-image.png',
   },
   {
     id: 2,
-    name: 'Mr. Chamara',
-    designation: 'Manager',
+    name: 'Mr. Chamara Nagodavithane',
+    designation: 'Export Manager',
     image: '/images/about/no-image.png',
   },
-  // {
-  //   id: 3,
-  //   name: 'Sofia Ramanantsoa',
-  //   designation: 'Director of Client Relations',
-  //   image: '/images/about/no-image.png',
-  // },
-  // {
-  //   id: 4,
-  //   name: 'David Randrianarisoa',
-  //   designation: 'Logistics Manager',
-  //   image: '/images/about/no-image.png',
-  // }
+  {
+    id: 3,
+    name: 'Mr. Lakshitha Modorage',
+    designation: 'Export Warehouse Manager',
+    image: '/images/about/no-image.png',
+  },
+  {
+    id: 4,
+    name: 'Mrs. Ranaganie Rabel',
+    designation: 'Front Office and Admin Executive',
+    image: '/images/about/no-image.png',
+  }
 ];
 
 // Core Values

@@ -41,7 +41,7 @@ const ProcessConditioning = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center mb-12">
           <div className="rounded-3xl overflow-hidden shadow-2xl">
             <img
-              src="/images/vanilla-process/conditioning.png"
+              src="/images/vanilla-process/conditioning.JPG"
               alt="Vanilla Sourcing"
               className="w-full h-full object-cover"
             />

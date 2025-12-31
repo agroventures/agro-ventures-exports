@@ -72,14 +72,14 @@ const About = () => {
               <div className="space-y-4">
                 <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/images/home/img1.JPG"
+                    src="/images/home/img1.jpg"
                     alt="Vanilla Flower"
                     className="w-full h-48 object-cover"
                   />
                 </div>
                 <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/images/home/img2.JPG"
+                    src="/images/home/img2.jpg"
                     alt="Plantations"
                     className="w-full h-64 object-cover"
                   />
@@ -88,7 +88,7 @@ const About = () => {
               <div className="space-y-4 pt-8">
                 <div className="rounded-3xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-500">
                   <img
-                    src="/images/home/img3.JPG"
+                    src="/images/home/img3.jpg"
                     alt="Quality Check"
                     className="w-full h-128 object-cover"
                   />

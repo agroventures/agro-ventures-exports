@@ -1021,7 +1021,7 @@ export const sortingCriteria = [
 export const ceoData = {
   name: 'Mr. Nilanga Karunarathne',
   designation: 'CEO/Founder',
-  image: '/images/about/founder.png',
+  image: '/images/about/founder.JPG',
   message: `"As the Founder of Agroventures Exports, I am filled with immense pride and gratitude for the journey we have undertaken together. From the very inception of this company, our vision was clear - to revolutionize Sri Lanka's agricultural landscape by fostering sustainability, empowering communities, and delivering exceptional produce to the world.
               
               Today, I stand humbled by the strides we have made and the impact we have created. Our commitment to sustainable practices has not only yielded premium crops but has also preserved the precious environment that sustains us. We have demonstrated that responsible agriculture can be a powerful force for positive change, benefitting both farmers and consumers alike."`,

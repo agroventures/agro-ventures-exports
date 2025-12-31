@@ -64,7 +64,7 @@ const CEOAndTeam = () => {
                 <img
                   src={ceoData.image}
                   alt={ceoData.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
 

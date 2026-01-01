@@ -796,7 +796,8 @@ export const values = [
     icon: Eye,
     title: "Our Vision",
     description:
-      "Our vision is to generate USD 1 billion for Sri Lanka by 2030 through sustainable and large-scale vanilla cultivation.
+      "Our vision is to generate USD 1 billion for Sri Lanka by 2030 through sustainable and large-scale vanilla cultivation.",
+    color: "primary",
   },
   {
     icon: Target,

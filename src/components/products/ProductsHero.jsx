@@ -48,7 +48,7 @@ const ProductsHero = () => {
 
             <p className="text-xl text-white/80 leading-relaxed max-w-2xl mb-8">
               Explore our comprehensive range of export-quality spices, grains,
-              pulses, and specialty products sourced directly from India's
+              pulses, and specialty products sourced directly from Sri Lanka's
               finest farms.
             </p>
 

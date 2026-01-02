@@ -1045,13 +1045,13 @@ export const teamMembers = [
     id: 1,
     name: 'Mr. Heshan Nanayakkara',
     designation: 'Chief Operations Officer',
-    image: '/images/about/no-image.png',
+    image: '/images/about/member1.jpg',
   },
   {
     id: 2,
     name: 'Mr. Chamara Nagodavithane',
     designation: 'Export Manager',
-    image: '/images/about/no-image.png',
+    image: '/images/about/member2.jpg',
   },
   {
     id: 3,
@@ -1063,7 +1063,7 @@ export const teamMembers = [
     id: 4,
     name: 'Ms. Ranganie Rabel',
     designation: 'Front Office and Admin Executive',
-    image: '/images/about/no-image.png',
+    image: '/images/about/member4.jpg',
   }
 ];
 

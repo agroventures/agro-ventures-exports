@@ -54,11 +54,6 @@ const CEOAndTeam = () => {
           <div className="flex flex-col lg:flex-row">
             {/* Image */}
             <div className="lg:w-2/5 p-10 text-center relative">
-              <div className="absolute top-4 left-4 bg-linear-to-r from-primary-500 to-primary-600 text-white px-4 py-2 rounded-full shadow-lg">
-                <div className='flex justify-center gap-2'>
-                  <Crown /> CEO
-                </div>
-              </div>
 
               <div className="mx-auto w-72 h-72 rounded-full overflow-hidden border-4 border-primary-400 shadow-xl">
                 <img
@@ -85,7 +80,7 @@ const CEOAndTeam = () => {
                   {ceoData.name}
                 </p>
                 <p className="text-stone-500 text-sm">
-                  Chief Executive Officer
+                  Chairman
                 </p>
               </div>
             </div>

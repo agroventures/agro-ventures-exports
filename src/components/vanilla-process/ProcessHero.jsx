@@ -95,7 +95,7 @@ const ProcessHero = () => {
           Discover the process
         </span>
         <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
-          <div className="w-1.5 h-3 bg-amber-400 rounded-full animate-bounce" />
+          <div className="w-1.5 h-3 bg-white/60 rounded-full animate-bounce" />
         </div>
       </div>
     </section>

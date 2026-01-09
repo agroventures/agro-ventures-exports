@@ -239,7 +239,7 @@ export const products = [
   {
     id: 4,
     name: "Natural Vanilla Powder",
-    slug: "natural-vanilla-powder",
+    slug: "vanilla-tea-powder",
     image: "/images/products/VANILLA_POWDER.png",
     excerpt:
       "Discover the delicate, aromatic essence of hand-selected Sri Lankan vanilla beans in a finely ground, convenient powder form.",
@@ -366,7 +366,7 @@ export const products = [
   {
     id: 7,
     name: "Hand Made Vanilla Based Soap",
-    slug: "handmade-vanilla-soap",
+    slug: "handmade-soap",
     image: "/images/products/HAND_MADE_SOAP.jpg",
     excerpt:
       "Indulge in the luxurious care of handmade soaps enriched with premium natural vanilla.",
@@ -456,7 +456,7 @@ export const products = [
   {
     id: 9,
     name: "Natural Vanilla Tea",
-    slug: "natural-vanilla-infused-tea",
+    slug: "natural-vanilla-tea",
     image: "/images/products/VANILLA_TEA.jpg",
     excerpt:
       "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",
@@ -497,7 +497,7 @@ export const products = [
   {
     id: 10,
     name: "Vanilla & Cinnamon Blended Tea",
-    slug: "vanilla-and-cinnamon-blended-tea",
+    slug: "natural-vanilla-infused-tea-sachet-pack",
     image: "/images/products/VANILLA_CINNAMON_TEA.png",
     excerpt:
       "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",

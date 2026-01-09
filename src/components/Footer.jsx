@@ -145,18 +145,37 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-6">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-gray-400 text-center md:text-left">
-              © {new Date().getFullYear()} Agro Ventures Exports. All rights reserved. Developed by  <a href="https://ventrax.lk">Ventrax.lk</a>.
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-gray-800 pt-6">
+            {/* Copyright */}
+            <p className="text-sm text-gray-400 text-center md:text-left leading-relaxed">
+              © {new Date().getFullYear()}{" "}
+              <span className="font-medium text-gray-300">
+                Agro Ventures Exports
+              </span>
+              . All rights reserved. Developed by{" "}
+              <a
+                href="https://ventrax.lk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-500 hover:text-primary-400 transition-colors underline underline-offset-4"
+              >
+                Ventrax.lk
+              </a>
             </p>
-            
+          
             {/* Social Links */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3">
               {socialLinks.map((social, index) => (
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-primary-600 hover:text-white transition-all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  className="w-10 h-10 rounded-full bg-gray-800/70 flex items-center justify-center 
+                             text-gray-400 hover:text-white hover:bg-primary-600 
+                             transition-all duration-300 ease-out 
+                             focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-gray-900"
                 >
                   <social.icon className="w-5 h-5" />
                 </a>

@@ -145,7 +145,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-800 py-6">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6 border-t border-gray-800 pt-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-6">
             {/* Copyright */}
             <p className="text-sm text-gray-400 text-center md:text-left leading-relaxed">
               © {new Date().getFullYear()}{" "}

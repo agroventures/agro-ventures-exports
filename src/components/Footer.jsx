@@ -147,7 +147,7 @@ const Footer = () => {
         <div className="container-custom">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-400 text-center md:text-left">
-              © {new Date().getFullYear()} <a href="https://ventrax.lk">Ventrax.lk</a>. All rights reserved.
+              © {new Date().getFullYear()} Agro Ventures Exports. All rights reserved. Developed by  <a href="https://ventrax.lk">Ventrax.lk</a>.
             </p>
             
             {/* Social Links */}

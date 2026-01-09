@@ -607,7 +607,7 @@ export const products = [
   },
 ];
 
-//Support Links
+// Support Links
 export const support = [
   { name: "Contact Us", href: "#contact" },
   { name: "FAQ", href: "#" },
@@ -617,7 +617,7 @@ export const support = [
   { name: "Terms & Conditions", href: "#" },
 ];
 
-//Services
+// Services
 export const services = [
   {
     id: "creating-awareness",

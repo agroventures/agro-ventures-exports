@@ -58,7 +58,9 @@ const Footer = () => {
                   <span className="block text-xs text-gray-400 tracking-widest uppercase">Exports</span>
                 </div>
               </a> */}
-              <img src="/logo-2.png" className='w-40' alt="Logo" />
+              <div className="bg-white p-3 rounded-xl w-fit mb-6">
+                <img src="/images/logo.png" className='w-32' alt="Logo" />
+              </div>
               <p className="text-gray-400 mb-6">
                 Leading exporter of premium quality agricultural products from Sri Lanka to the world.
               </p>

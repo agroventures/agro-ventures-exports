@@ -34,7 +34,7 @@ const OfficeLocations = () => {
             <span className="block text-primary-400">Local Expertise</span>
           </h2>
           <p className="text-lg text-gray-300">
-            With strategic locations across India and the Middle East, we ensure 
+            With strategic locations across Sri Lanka, we ensure 
             seamless operations and quick response to your needs.
           </p>
         </div>

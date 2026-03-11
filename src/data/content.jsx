@@ -1059,12 +1059,12 @@ export const teamMembers = [
     designation: 'Export Warehouse Manager',
     image: '/images/about/no-image.png',
   },
-  {
-    id: 4,
-    name: 'Ms. Ranganie Rabel',
-    designation: 'Front Office and Admin Executive',
-    image: '/images/about/member4.jpg',
-  }
+  // {
+  //   id: 4,
+  //   name: 'Ms. Ranganie Rabel',
+  //   designation: 'Front Office and Admin Executive',
+  //   image: '/images/about/member4.jpg',
+  // }
 ];
 
 // Core Values

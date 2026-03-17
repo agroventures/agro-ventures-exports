@@ -96,6 +96,7 @@ export const navLinks = [
   { name: "About", href: "/about" },
   { name: "Products", href: "/products" },
   { name: "Services", href: "/services" },
+  { name: "Research and Development", href: "/research-and-development" },
   { name: "Vanilla Process", href: "/vanilla-process" },
   { name: "Contact", href: "/contact" },
 ];

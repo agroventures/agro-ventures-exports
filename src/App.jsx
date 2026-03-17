@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
+import ResearchAndDevelopment from "./pages/ResearchAndDevelopment";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/research-and-development" element={<ResearchAndDevelopment />} />
           <Route path="/vanilla-process" element={<VanillaProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

@@ -98,7 +98,7 @@ const Footer = () => {
             <div>
               <h4 className="text-lg font-bold mb-6">Company</h4>
               <ul className="space-y-3">
-                {navLinks.map((link, index) => (
+                {navLinks.slice(0, 3).map((link, index) => (
                   <li key={index}>
                     <Link to={link.href} className="text-gray-400 hover:text-primary-400 transition-colors">
                       {link.name}
@@ -106,6 +106,13 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
+
+              <div className='mt-10'>
+                <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
+                  Trusted Partner
+                </h4>
+                <img src="/images/about/kpmg.png" alt="KPMG Logo" className="w-30" />
+              </div>
             </div>
 
             {/* Support */}
@@ -164,7 +171,7 @@ const Footer = () => {
                 Ventrax.lk
               </a>
             </p>
-          
+
             {/* Social Links */}
             <div className="flex items-center space-x-3">
               {socialLinks.map((social, index) => (

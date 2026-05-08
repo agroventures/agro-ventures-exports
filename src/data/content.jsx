@@ -1048,14 +1048,14 @@ export const teamMembers = [
     designation: 'Chief Operations Officer',
     image: '/images/about/member1.jpg',
   },
+  // {
+  //   id: 2,
+  //   name: 'Mr. Chamara Nagodavithane',
+  //   designation: 'Export Manager',
+  //   image: '/images/about/member2.jpg',
+  // },
   {
     id: 2,
-    name: 'Mr. Chamara Nagodavithane',
-    designation: 'Export Manager',
-    image: '/images/about/member2.jpg',
-  },
-  {
-    id: 3,
     name: 'Mr. Lakshitha Modorage',
     designation: 'Export Warehouse Manager',
     image: '/images/about/no-image.png',

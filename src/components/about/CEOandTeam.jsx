@@ -89,7 +89,7 @@ const CEOAndTeam = () => {
       </div>
 
       {/* ------------------ TEAM GRID ------------------ */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
+      {/* <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="grid gap-6 mb-16 grid-cols-2 justify-items-center [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:w-1/2">
           {teamMembers.map((member) => {
             const isHovered = hoveredMember === member.id;
@@ -102,7 +102,6 @@ const CEOAndTeam = () => {
                 className={`bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-500
                 ${isHovered ? 'shadow-2xl scale-105 -translate-y-2' : ''}`}
               >
-                {/* Image */}
                 <div className="relative aspect-square overflow-hidden">
                   <img
                     src={member.image}
@@ -111,7 +110,6 @@ const CEOAndTeam = () => {
                   />
                 </div>
 
-                {/* Content */}
                 <div className="p-5">
                   <h3 className="font-bold text-md text-stone-800">
                     {member.name}
@@ -126,7 +124,7 @@ const CEOAndTeam = () => {
             );
           })}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

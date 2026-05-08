@@ -89,10 +89,8 @@ const CEOAndTeam = () => {
       </div>
 
       {/* ------------------ TEAM GRID ------------------ */}
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid gap-6 mb-16
-                grid-cols-[repeat(auto-fit,minmax(240px,1fr))]
-                justify-items-center">
+      <div className="max-w-5xl mx-auto px-6 py-16">
+        <div className="grid gap-6 mb-16 grid-cols-2 justify-items-center [&>*:last-child:nth-child(odd)]:col-span-2 [&>*:last-child:nth-child(odd)]:w-1/2">
           {teamMembers.map((member) => {
             const isHovered = hoveredMember === member.id;
 

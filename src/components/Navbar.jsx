@@ -87,7 +87,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-100 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-120 opacity-100 mt-4' : 'max-h-0 opacity-0'
         }`}>
           <div className="bg-white rounded-2xl shadow-xl p-4 space-y-2">
             {navLinks.map((link) => (

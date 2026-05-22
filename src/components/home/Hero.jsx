@@ -1,148 +1,145 @@
-import React, { useEffect, useState } from 'react'
-import { ArrowDown, ArrowRight, ChevronDown } from 'lucide-react'
-import { features, slides } from '../../data/content'
+import { useEffect, useState } from 'react';
+import { ArrowDown, Play } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
+import { features, slides } from '../../data/content';
 
-const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0)
+export default function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [wordIndex, setWordIndex] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length)
-    }, 6000)
-    return () => clearInterval(timer)
-  }, [])
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const scrollToAbout = () => {
+    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Slides */}
       {slides.map((slide, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ${
-            currentSlide === index ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'}`}
         >
-          <img
-            src={slide.image}
-            alt={slide.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-transparent" />
-          <div className="absolute inset-0 bg-linear-to-t from-black/50 via-transparent to-black/30" />
+          <img src={slide.image} alt={slide.title} className="w-full h-full object-cover object-center scale-105" />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-linear-to-b from-[#0a0a0a]/80 via-[#0a0a0a]/60 to-[#0a0a0a]" />
+          <div className="absolute inset-0 bg-linear-to-r from-secondary/30 via-transparent to-secondary/10" />
         </div>
       ))}
 
-      {/* Animated Shapes */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-72 h-72 bg-primary-500/20 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary-500/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+      {/* Decorative Rings */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="relative w-200 h-200 opacity-10">
+          <div className="absolute inset-0 rounded-full border border-primary spin-slow" />
+          <div className="absolute inset-16 rounded-full border border-primary spin-slow-reverse" />
+          <div className="absolute inset-32 rounded-full border border-primary/50 spin-slow" />
+        </div>
       </div>
 
-      {/* Content */}
-      <div className="container-custom relative z-10 pt-20">
-        <div className="flex justify-center items-center text-center min-h-[80vh]">
-          <div className="text-white space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 animate-fade-in">
-              <span className="w-2 h-2 bg-primary-400 rounded-full animate-pulse" />
-              <span className="text-sm font-medium">Sri Lanka's Leading Agro Exporter</span>
-            </div>
+      {/* Hero Content + Certifications */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-36 pb-20 flex items-center justify-between gap-12">
 
-            {/* Main Title */}
-            <div className="space-y-2">
-              <h1 className="text-5xl md:text-7xl font-display font-bold leading-tight animate-fade-in-up">
-                {slides[currentSlide].title}
-                <span className="block text-primary-400 mt-2">
-                  {slides[currentSlide].subtitle}
-                </span>
-              </h1>
-            </div>
-
-            {/* Description */}
-            <p className="text-lg md:text-xl text-white/80 max-w-xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              {slides[currentSlide].description}
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <a href="#about" className="btn-primary group">
-                Explore
-                <ArrowDown className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
-
-            {/* Feature Pills */}
-            <div className="flex flex-wrap justify-center gap-4 pt-4 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-              {features.map((feature, index) => (
-                <div 
-                  key={index}
-                  className="flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2"
-                >
-                  <feature.icon className="w-5 h-5 text-primary-400" />
-                  <span className="text-sm font-medium">{feature.text}</span>
-                </div>
-              ))}
-            </div>
+        {/* Left: Content */}
+        <div className="flex-1 min-w-0">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-white border border-primary/30 bg-primary/10 mb-8 animate-fade-in">
+            <div className="w-2 h-2 rounded-full bg-primary-400 animate-pulse" />
+            <span className="text-primary text-xs tracking-[0.15em] lg:tracking-[0.3em] uppercase font-medium">
+              Sri Lanka's Leading Agro Exporter
+            </span>
           </div>
 
-          {/* Right Side - Floating Cards */}
-          {/* <div className="hidden lg:block relative">
-            <div className="relative w-full h-125">
-              <div className="absolute top-0 right-0 w-72 bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/20 animate-float">
-                <img 
-                  src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=400&q=80" 
-                  alt="Spices"
-                  className="w-full h-40 object-cover rounded-2xl mb-4"
-                />
-                <h3 className="text-white font-semibold text-lg">Premium Spices</h3>
-                <p className="text-white/70 text-sm mt-1">Export Quality Turmeric, Chili, Cumin</p>
-              </div>
+          {/* Main Heading */}
+          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+            {slides[currentSlide].title}
+            <br />
+            <span className="gold-shimmer">{slides[currentSlide].subtitle}</span>
+          </h1>
 
-              <div className="absolute bottom-0 left-0 w-64 bg-white/10 backdrop-blur-lg rounded-3xl p-6 border border-white/20 animate-float" style={{ animationDelay: '1s' }}>
-                <img 
-                  src="/images/images/pure_vanilla.jpg" 
-                  alt="Vanilla"
-                  className="w-full h-32 object-cover rounded-2xl mb-4"
-                />
-                <h3 className="text-white font-semibold">Vanilla Extracts</h3>
-                <p className="text-white/70 text-sm mt-1">Long Grain Premium Quality</p>
-              </div>
+          {/* Description */}
+          <p className="text-gray-400 text-sm md:text-lg max-w-xl mb-10 leading-relaxed">
+            {slides[currentSlide].description}
+          </p>
 
-              <div className="absolute top-1/2 left-10 bg-primary-600 rounded-2xl p-4 shadow-xl animate-float" style={{ animationDelay: '2s' }}>
-                <div className="text-white text-center">
-                  <div className="text-3xl font-bold">500+</div>
-                  <div className="text-sm opacity-80">Happy Clients</div>
-                </div>
-              </div>
-            </div>
-          </div> */}
-
-          
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex space-x-3">
-          {slides.map((_, index) => (
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 mb-10">
             <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`h-2 rounded-full transition-all duration-300 ${
-                currentSlide === index 
-                  ? 'w-8 bg-primary-500' 
-                  : 'w-2 bg-white/50 hover:bg-white/70'
-              }`}
-            />
+              onClick={() => navigate('/products')}
+              className="px-6 py-3.5 bg-primary-600 text-white font-semibold text-sm tracking-wider w-full sm:w-auto text-center hover:bg-white transition-colors duration-300"
+            >
+              Explore Our Products
+            </button>
+          </div>
+
+          {/* Feature Pills */}
+          <div className="flex flex-wrap gap-4">
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20">
+                <feature.icon className="w-4 h-4 text-white" />
+                <span className="text-sm font-medium text-white">{feature.text}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Stats Row */}
+          {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { value: '10+', label: 'Group Companies' },
+              { value: '2', label: 'Countries' },
+              { value: '10+', label: 'Business Sectors' },
+              { value: '1000+', label: 'Employees' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="text-3xl md:text-4xl font-bold font-serif text-white mb-1">{stat.value}</div>
+                <div className="text-gray-500 text-xs tracking-wider uppercase">{stat.label}</div>
+              </div>
+            ))}
+          </div> */}
+        </div>
+
+        {/* Right: Certifications */}
+        {/* <div className="hidden lg:flex flex-row gap-4 shrink-0">
+          {[
+            { src: '/images/certifications/great-place.png', alt: 'Great Place to Work' },
+            { src: '/images/certifications/great-place-manufacturing.png', alt: 'Great Place to Work – Manufacturing' },
+          ].map((cert) => (
+            <div key={cert.alt} className="w-40 h-40 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm p-2 hover:bg-white/20 transition-colors">
+              <img src={cert.src} alt={cert.alt} className="w-full h-full object-contain" />
+            </div>
           ))}
-        </div>
+        </div> */}
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 right-10 hidden md:flex flex-col items-center space-y-2 text-white/60">
-          <span className="text-sm tracking-widest uppercase rotate-90 origin-center translate-y-8">Scroll</span>
-          <ChevronDown className="w-5 h-5 animate-bounce mt-12" />
-        </div>
       </div>
-    </section>
-  )
-}
 
-export default Hero
+      {/* Slide Indicators */}
+      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex space-x-3 z-10">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setCurrentSlide(index)}
+            className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index ? 'w-8 bg-primary' : 'w-2 bg-white/50 hover:bg-white/70'}`}
+          />
+        ))}
+      </div>
+
+      {/* Scroll Indicator */}
+      <button
+        onClick={scrollToAbout}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400 hover:text-primary transition-colors animate-bounce z-10"
+      >
+        <span className="text-xs tracking-[0.2em] uppercase">Scroll</span>
+        <ArrowDown size={16} />
+      </button>
+
+      {/* Bottom gradient blend */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-[#0a0a0a] to-transparent" />
+    </section>
+  );
+}

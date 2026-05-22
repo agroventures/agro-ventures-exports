@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import { ArrowDown, Play } from 'lucide-react';
+import { ArrowDown, ChevronRight, Leaf, Sprout, ShieldCheck } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { features, slides } from '../../data/content';
+import { FaSoap } from 'react-icons/fa';
 
 export default function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [wordIndex, setWordIndex] = useState(0);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -18,6 +18,13 @@ export default function Hero() {
   const scrollToAbout = () => {
     document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  // Sample data for the right column—move this to your content data file later if desired
+  const showcaseCategories = [
+    { name: 'Vanilla Extract', icon: Leaf, desc: 'Pure, organic, and authentic grades' },
+    { name: 'Premium Tea', icon: Sprout, desc: 'Hand-picked from central highlands' },
+    { name: 'Soap', icon: FaSoap, desc: 'Enriched with natural vanilla' },
+  ];
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -43,8 +50,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Hero Content + Certifications */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-36 pb-20 flex items-center justify-between gap-12">
+      {/* Hero Content + Showcase */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-36 pb-20 flex flex-col lg:flex-row items-center justify-between gap-16">
 
         {/* Left: Content */}
         <div className="flex-1 min-w-0">
@@ -60,7 +67,7 @@ export default function Hero() {
           <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
             {slides[currentSlide].title}
             <br />
-            <span className="gold-shimmer">{slides[currentSlide].subtitle}</span>
+            <span className="gold-shimmer text-primary-400">{slides[currentSlide].subtitle}</span>
           </h1>
 
           {/* Description */}
@@ -72,7 +79,7 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-start gap-3 mb-10">
             <button
               onClick={() => navigate('/products')}
-              className="px-6 py-3.5 bg-primary-600 text-white font-semibold text-sm tracking-wider w-full sm:w-auto text-center hover:bg-white transition-colors duration-300"
+              className="px-6 py-3.5 bg-primary-600 text-white font-semibold text-sm tracking-wider w-full sm:w-auto text-center hover:bg-white hover:text-black transition-colors duration-300"
             >
               Explore Our Products
             </button>
@@ -87,34 +94,37 @@ export default function Hero() {
               </div>
             ))}
           </div>
-
-          {/* Stats Row */}
-          {/* <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { value: '10+', label: 'Group Companies' },
-              { value: '2', label: 'Countries' },
-              { value: '10+', label: 'Business Sectors' },
-              { value: '1000+', label: 'Employees' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="text-3xl md:text-4xl font-bold font-serif text-white mb-1">{stat.value}</div>
-                <div className="text-gray-500 text-xs tracking-wider uppercase">{stat.label}</div>
-              </div>
-            ))}
-          </div> */}
         </div>
 
-        {/* Right: Certifications */}
-        {/* <div className="hidden lg:flex flex-row gap-4 shrink-0">
-          {[
-            { src: '/images/certifications/great-place.png', alt: 'Great Place to Work' },
-            { src: '/images/certifications/great-place-manufacturing.png', alt: 'Great Place to Work – Manufacturing' },
-          ].map((cert) => (
-            <div key={cert.alt} className="w-40 h-40 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm p-2 hover:bg-white/20 transition-colors">
-              <img src={cert.src} alt={cert.alt} className="w-full h-full object-contain" />
-            </div>
-          ))}
-        </div> */}
+        {/* Right: Featured Pillars Stack */}
+        <div className="hidden lg:flex flex-col gap-4 w-96 shrink-0 bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+          <div className="mb-2">
+            <span className="text-[10px] tracking-widest uppercase font-semibold text-primary-400">Export Categories</span>
+            <h3 className="text-lg font-serif font-bold text-white">Our Signature Pillars</h3>
+          </div>
+
+          {showcaseCategories.map((cat, idx) => {
+            const IconComponent = cat.icon;
+            return (
+              <div 
+                key={idx}
+                onClick={() => navigate('/products')}
+                className="group flex items-center justify-between p-4 rounded-xl bg-white/5 border border-white/5 hover:border-primary/40 hover:bg-primary/5 transition-all duration-300 cursor-pointer"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-white/5 group-hover:bg-primary/20 text-white group-hover:text-primary transition-colors">
+                    <IconComponent size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-semibold text-white group-hover:text-primary transition-colors">{cat.name}</h4>
+                    <p className="text-xs text-gray-400 mt-0.5 line-clamp-1">{cat.desc}</p>
+                  </div>
+                </div>
+                <ChevronRight size={16} className="text-gray-500 group-hover:text-primary group-hover:translate-x-1 transition-all" />
+              </div>
+            );
+          })}
+        </div>
 
       </div>
 

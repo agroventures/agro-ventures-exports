@@ -64,7 +64,7 @@ export default function Hero() {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 leading-tight">
             {slides[currentSlide].title}
             <br />
             <span className="gold-shimmer text-primary-400">{slides[currentSlide].subtitle}</span>
@@ -100,7 +100,7 @@ export default function Hero() {
         <div className="hidden lg:flex flex-col gap-4 w-96 shrink-0 bg-black/20 backdrop-blur-md p-6 rounded-2xl border border-white/10">
           <div className="mb-2">
             <span className="text-[10px] tracking-widest uppercase font-semibold text-primary-400">Export Categories</span>
-            <h3 className="text-lg font-serif font-bold text-white">Our Signature Pillars</h3>
+            <h3 className="text-lg font-bold text-white">Our Signature Pillars</h3>
           </div>
 
           {showcaseCategories.map((cat, idx) => {

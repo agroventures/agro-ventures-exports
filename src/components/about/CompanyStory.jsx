@@ -25,7 +25,7 @@ const CompanyStory = () => {
               <div className="col-span-8 row-span-2">
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl img-zoom h-125">
                   <img
-                    src="/images/about/img2.jpg"
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/about/img2.jpg"
                     alt="Our Farm"
                     className="w-full h-full object-cover"
                   />
@@ -37,7 +37,7 @@ const CompanyStory = () => {
               <div className="col-span-4">
                 <div className="rounded-2xl overflow-hidden shadow-xl img-zoom h-60">
                   <img
-                    src="/images/about/img3.jpg"
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/about/img3.jpg"
                     alt="Spices"
                     className="w-full h-full object-cover"
                   />
@@ -48,7 +48,7 @@ const CompanyStory = () => {
               <div className="col-span-4">
                 <div className="rounded-2xl overflow-hidden shadow-xl img-zoom h-60">
                   <img
-                    src="/images/about/img4.jpg"
+                    src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/about/img4.jpg"
                     alt="Rice"
                     className="w-full h-full object-cover"
                   />

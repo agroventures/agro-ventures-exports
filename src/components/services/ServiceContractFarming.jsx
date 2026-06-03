@@ -20,7 +20,7 @@ const ServiceContractFarming = () => {
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/images/services/img8.png"
+                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/services/img8.png"
                 alt="Contract Farming"
                 className="w-full h-100 object-cover"
               />

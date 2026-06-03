@@ -111,7 +111,7 @@ const Footer = () => {
                 <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
                   Trusted Partner
                 </h4>
-                <img src="/images/about/kpmg.png" alt="KPMG Logo" className="w-30" />
+                <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/about/kpmg.png" alt="KPMG Logo" className="w-30" />
               </div>
             </div>
 

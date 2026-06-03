@@ -54,7 +54,7 @@ const ProcessSourcing = () => {
 
           <div className="rounded-3xl overflow-hidden shadow-2xl">
             <img
-              src="/images/vanilla-process/sourcing.jpg"
+              src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/vanilla-process/sourcing.JPG"
               alt="Vanilla Sourcing"
               className="w-full h-full object-cover"
             />

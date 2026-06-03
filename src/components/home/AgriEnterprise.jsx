@@ -15,7 +15,7 @@ const AgriEnterprise = () => {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="/images/home/img4.JPG"
+                src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/home/img4.JPG"
                 alt="Quality Farm"
                 className="w-full h-125 object-cover"
               />

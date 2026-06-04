@@ -32,7 +32,7 @@ const About = () => {
       {/* <Timeline /> */}
       {/* <Plantations /> */}
       <CEOAndTeam />
-      <Projects />
+      {/* <Projects /> */}
       {/* <Team /> */}
       <Certifications />
       {/* <CTA /> */}

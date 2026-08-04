@@ -163,12 +163,12 @@ const Footer = () => {
               </span>
               . All rights reserved. Developed by{" "}
               <a
-                href="https://ventrax.lk"
-                target="_blank"
+                href="#"
+                // target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-500 hover:text-primary-400 transition-colors underline underline-offset-4"
               >
-                Ventrax.lk
+                Agroventures Digital
               </a>
             </p>
 

@@ -367,7 +367,7 @@ export const products = [
   {
     id: 7,
     name: "Hand Made Vanilla Based Soap",
-    slug: "handmade-soap",
+    slug: "hand-made-soap",
     image: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/products/HAND_MADE_SOAP.jpg",
     excerpt:
       "Indulge in the luxurious care of handmade soaps enriched with premium natural vanilla.",
@@ -498,7 +498,7 @@ export const products = [
   {
     id: 10,
     name: "Vanilla & Cinnamon Blended Tea",
-    slug: "natural-vanilla-infused-tea-sachet-pack",
+    slug: "vanilla-cinnamon-blended-tea",
     image: "https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/products/VANILLA_CINNAMON_TEA.png",
     excerpt:
       "Savor the exquisite taste of premium Ceylon tea leaves, renowned worldwide for their bright, brisk flavor and natural freshness, delicately infused with pure Sri Lankan vanilla.",

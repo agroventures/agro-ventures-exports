@@ -48,7 +48,7 @@ const Footer = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Brand */}
-            <div className="col-span-2 md:col-span-4 lg:col-span-2">
+            <div className="col-span-2 md:col-span-4 lg:col-span-1">
               {/* <a href="#home" className="flex items-center space-x-3 mb-6">
                 <div className="p-2 bg-primary-600 rounded-xl">
                   <Leaf className="w-8 h-8 text-white" />
@@ -95,7 +95,7 @@ const Footer = () => {
             </div>
 
             {/* Company */}
-            {/* <div>
+            <div>
               <h4 className="text-lg font-bold mb-6">Company</h4>
               <ul className="space-y-3">
                 {navLinks.slice(0, 3).map((link, index) => (
@@ -107,13 +107,13 @@ const Footer = () => {
                 ))}
               </ul>
 
-              <div className='mt-10'>
+              {/* <div className='mt-10'>
                 <h4 className="font-display text-lg font-semibold text-text-inverse mb-6">
                   Trusted Partner
                 </h4>
                 <img src="https://pub-8476bede5a4146e8b7731cfe515f1c3b.r2.dev/av-exports/about/kpmg.png" alt="KPMG Logo" className="w-30" />
-              </div>
-            </div> */}
+              </div> */}
+            </div>
 
             {/* Support */}
             {/* <div>

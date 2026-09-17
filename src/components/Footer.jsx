@@ -75,7 +75,7 @@ const Footer = () => {
                 </a>
                 <div className="flex items-start text-gray-400">
                   <MapPin className="w-5 h-5 mr-3 shrink-0 mt-1" />
-                  <span>No: 48, Sir Marcus Fernando, Colombo 07, Sri Lanka</span>
+                  <span>No: 48, Sir Marcus Fernando Mawathe, Colombo 07, Sri Lanka</span>
                 </div>
               </div>
             </div>

@@ -46,9 +46,9 @@ const Footer = () => {
       {/* Main Footer */}
       <div className="py-16">
         <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Brand */}
-            <div className="col-span-2 md:col-span-4 lg:col-span-1">
+            <div className="col-span-2 md:col-span-4 lg:col-span-2">
               {/* <a href="#home" className="flex items-center space-x-3 mb-6">
                 <div className="p-2 bg-primary-600 rounded-xl">
                   <Leaf className="w-8 h-8 text-white" />

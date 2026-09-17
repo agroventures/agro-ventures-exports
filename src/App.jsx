@@ -14,19 +14,9 @@ import ResearchAndDevelopment from "./pages/ResearchAndDevelopment";
 
 function App() {
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 300);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   if (loading) {
-    return <Loader />;
+    return <Loader onComplete={() => setLoading(false)} />;
   }
-
   return (
     <div className="overflow-hidden">
       <BrowserRouter>
@@ -36,7 +26,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/research-and-development" element={<ResearchAndDevelopment />} />
+          <Route
+            path="/research-and-development"
+            element={<ResearchAndDevelopment />}
+          />
           <Route path="/vanilla-process" element={<VanillaProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
@@ -45,5 +38,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
